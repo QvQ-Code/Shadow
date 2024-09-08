@@ -32,7 +32,7 @@ const buffs = [
   { name: "Increase Defense" },
   { name: "Invincible" },
   { name: "Increase Speed" },
-  { name: "Immortality" },
+  { name: "Immortal" },
   { name: "Barrier" },
   { name: "Increase Critical Hit Resistance" },
   { name: "Continuous Heal" },
@@ -57,9 +57,11 @@ const buffs = [
   // Undispellable
   { name: "Idol" },
   { name: "Vigor" },
+  { name: "Spirit's Blessing" },
   { name: "Dual Attack" },
   { name: "Penetrate" },
   { name: "Extra Turn" },
+  { name: "Detonate" },
 ];
 
 // Array of objects for debuffs
@@ -92,6 +94,7 @@ const debuffs = [
   { name: "Beguile" },
   { name: "Cannot Counterattack" },
   { name: "Block" },
+  { name: "Random Debuff" },
 ];
 
 // Array of objects for abilities
@@ -360,6 +363,424 @@ const characters = [
       },
     },
   },
+
+  {
+    name: "Summertime Iseria",
+    star: 5,
+    role: "Ranger",
+    element: "Fire",
+    imprint: {
+      "release": "Attack",
+      "concentration": "Effectiveness",
+    },
+    skills: {
+      skill_1: {
+        number: 1,
+        type: "",
+        name: "Are you the Culprit?",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: [],
+      },
+      skill_2: {
+        number: 2,
+        type: "",
+        name: "Suppression Attempt",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Bomb"],
+      },
+      skill_3: {
+        number: 3,
+        type: "",
+        name: "Sword of Flowers!",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Decrease Attack", "Increase Speed", "Bomb", "Detonate"],
+      },
+    },
+  },
+
+  {
+    name: "Destina",
+    star: 5,
+    role: "Soul Weaver",
+    element: "Earth",
+    imprint: {
+      "release": "Health",
+      "concentration": "Effect Resistance",
+    },
+    skills: {
+      skill_1: {
+        number: 1,
+        type: "",
+        name: "Key to an Oath",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: [],
+      },
+      skill_2: {
+        number: 2,
+        type: "",
+        name: "Regen",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: [],
+      },
+      skill_3: {
+        number: 3,
+        type: "",
+        name: "Destina's Grace",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Spirit's Blessing"],
+      },
+    },
+  },
+
+  {
+    name: "Kayron",
+    star: 5,
+    role: "Thief",
+    element: "Fire",
+    imprint: {
+      "release": "Health",
+      "concentration": "Attack",
+    },
+    skills: {
+      skill_1: {
+        number: 1,
+        type: "",
+        name: "Void Slash",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Decrease Hit Chance"],
+      },
+      skill_2: {
+        number: 2,
+        type: "",
+        name: "Immortal Will",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Immortal", "Evasion"],
+      },
+      skill_3: {
+        number: 3,
+        type: "",
+        name: "Apocalypse",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Increase Attack"],
+      },
+    },
+  },
+
+  {
+    name: "Tenebria",
+    star: 5,
+    role: "Mage",
+    element: "Fire",
+    imprint: {
+      "release": "Critical Hit Chance",
+      "concentration": "Effectiveness",
+    },
+    skills: {
+      skill_1: {
+        number: 1,
+        type: "",
+        name: "Dark Explosion",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Sleep"],
+      },
+      skill_2: {
+        number: 2,
+        type: "",
+        name: "Ominous Thunder",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Decrease Speed", "Restrict"],
+      },
+      skill_3: {
+        number: 3,
+        type: "",
+        name: "Nightmare",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Decrease Defense", "Sleep", "Increase Attack"],
+      },
+    },
+  },
+
+  {
+    name: "Fairytale Tenebria",
+    star: 5,
+    role: "Mage",
+    element: "Ice",
+    imprint: {
+      "release": "Health",
+      "concentration": "Effectiveness",
+    },
+    skills: {
+      skill_1: {
+        number: 1,
+        type: "",
+        name: "One Pair",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Redirected Provoke"],
+      },
+      skill_2: {
+        number: 2,
+        type: "",
+        name: "Wild Card",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Provoke", "Redirected Provoke", "Random Debuff"],
+      },
+      skill_3: {
+        number: 3,
+        type: "",
+        name: "Tea Party",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Cannot Buff", "Redirected Provoke"],
+      },
+    },
+  },
+
+  {
+    name: "Tamarinne",
+    star: 5,
+    role: "Soul Weaver",
+    element: "Fire",
+    imprint: {
+      "release": "Attack",
+      "concentration": "Health",
+    },
+    skills: {
+      skill_1: {
+        number: 1,
+        type: "",
+        name: "Serene Tune",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Dual Attack"],
+      },
+      skill_2: {
+        number: 2,
+        type: "",
+        name: "Song of the Forest",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Increase Attack"],
+      },
+      skill_3: {
+        number: 3,
+        type: "",
+        name: "Shining Star★",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Extra Turn", "Idol"],
+      },
+    },
+  },
+
+  {
+    name: "Roana",
+    star: 5,
+    role: "Soul Weaver",
+    element: "Earth",
+    imprint: {
+      "release": "Health",
+      "concentration": "Health",
+    },
+    skills: {
+      skill_1: {
+        number: 1,
+        type: "",
+        name: "Soul Purification",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Barrier"],
+      },
+      skill_2: {
+        number: 2,
+        type: "",
+        name: "Vigilant Eye",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Dual Attack"],
+      },
+      skill_3: {
+        number: 3,
+        type: "",
+        name: "Noble Reckos",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Barrier", "Revive"],
+      },
+    },
+  },
+
+  {
+    name: "Ravi",
+    star: 5,
+    role: "Warrior",
+    element: "Fire",
+    imprint: {
+      "release": "Attack",
+      "concentration": "Defense",
+    },
+    skills: {
+      skill_1: {
+        number: 1,
+        type: "",
+        name: "Slaughter",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: [],
+      },
+      skill_2: {
+        number: 2,
+        type: "",
+        name: "Demon's Blood",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Dual Attack"],
+      },
+      skill_3: {
+        number: 3,
+        type: "",
+        name: "Devil Drive",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Injury", "Stun"],
+      },
+    },
+  },
+
+
   // {
   //   name: "Ravi",
   //   star: 5,
@@ -438,12 +859,7 @@ const characters = [
   //   trait: ["Decrease Defense", "Cannot Buff"]
   // },
   // {
-  //   name: "Tenebria",
-  //   star: 5,
-  //   role: "Mage",
-  //   element: "Fire",
-  //   trait: ["Sleep", "Decrease Speed", "Restrict", "Decrease Defense", "Increase Attack"]
-  // },
+
   // {
   //   name: "Diene",
   //   star: 5,

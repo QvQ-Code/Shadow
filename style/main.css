@@ -303,6 +303,8 @@ header {
     width: 16px;
     height: 16px;
     display: block;
+    border-radius: .25rem;
+    overflow: hidden;
 }
 
 .character .char-box .figure img {
