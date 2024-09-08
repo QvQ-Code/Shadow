@@ -1,3 +1,24 @@
+const wordToNumberMap = {
+  "three": 3,
+  "four": 4,
+  "five": 5,
+};
+
+const star = [
+    {name: "three"},
+    {name: "four"},
+    {name: "five"},
+];
+
+const classes = [
+  {name: "Knight"},
+  {name: "Mage"},
+  {name: "Ranger"},
+  {name: "Soul Weaver"},
+  {name: "Thief"},
+  {name: "Warrior"},
+];
+
 const element = [ 
     { name: "ice"},
     { name: "fire"},
@@ -76,6 +97,7 @@ const special = [
 const characters = [
     // Fire Element
     { name: "Ravi", 
+        star: "five",
         role: "Warrior", 
         element: "Fire", 
         trait: [
@@ -87,79 +109,94 @@ const characters = [
         role: "Soul Weaver", 
         element: "Fire", 
         trait: [
-
+      "Increase Attack",
         ],
     },
-
+    
     { name: "Lilias", 
         role: "Knight", 
         element: "Fire", 
         trait: [
             "Provoke",
+      "Barrier",
         ],
     },
-
+    
     { name: "Haste", 
         role: "Thief", 
         element: "Fire", 
         trait: [
-            ""
+            "Decrease Defense",
+      "Unhealable",
+      "Vampiric Touch",
+      "Bleed",
         ] 
     },
-
+    
     { name: "Ken", 
         role: "Warrior", 
         element: "Fire", 
         trait: [
-            ""
+            "Decrease Defense",
+      "Burn",
+      "Increase Speed",
+      "Decrease Attack",
+      "Stun",
         ] 
     },
-
+    
     { name: "Cermia", 
         role: "Warrior", 
         element: "Fire", 
         trait: [
-            ""
+            "Unhealable",
+            "Increase Attack (Greater)",
         ] 
     },
-
+    
     { name: "Sol", 
         role: "Warrior", 
         element: "Fire", 
         trait: [
-            ""
+            "Silence",
+      "Cannot Buff",
         ] 
     },
-
+    
     { name: "Lilibet", 
         role: "Warrior", 
         element: "Fire", 
         trait: [
-            ""
+            "Cannot Buff",
+      "Bleed",
+      "Skill Nullifier",
         ] 
     },
-
+    
     { name: "Baiken", 
         role: "Thief", 
         element: "Fire", 
         trait: [
-            ""
+            "Bleed",
         ] 
     },
-
+    
     { name: "Kawerik", 
         role: "Mage", 
         element: "Fire", 
         trait: [
-            ""
+            "Silence",
+      "Stealth",
+      "Increase Speed",
         ] 
-    },
+    },  
 
     { name: "Iseria", 
         role: "Ranger", 
-        element: "Fire", 
+        element: "Earth", 
         trait: [
-            ""
+            "Decrease Defense",
+            "Cannot Buff",
         ] 
     },
 
@@ -167,7 +204,11 @@ const characters = [
         role: "Mage", 
         element: "Fire", 
         trait: [
-            ""
+            "Sleep",
+            "Decrease Speed",
+            "Restrict",
+            "Decrease Defense",
+            "Increase Attack",
         ] 
     },
     
@@ -176,7 +217,9 @@ const characters = [
         role: "Soul Weaver", 
         element: "Ice", 
         trait: [
-            ""
+            "Barrier",
+            "Increase Attack",
+            "Increase Critical Hit Resistance",
         ] 
     },
 
@@ -184,7 +227,9 @@ const characters = [
         role: "Knight", 
         element: "Ice", 
         trait: [
-            ""
+            "Provoke",
+            "Increase Defense",
+            "Barrier",
         ] 
     },
 
@@ -192,7 +237,9 @@ const characters = [
         role: "Soul Weaver", 
         element: "Ice", 
         trait: [
-            ""
+            "Stun",
+            "Immunity",
+            "Barrier",
         ] 
     },
     
@@ -200,7 +247,9 @@ const characters = [
         role: "Mage", 
         element: "Ice", 
         trait: [
-            ""
+            "Decrease Defense",
+            "Increase Defense",
+            "Barrier",
         ] 
     },
     

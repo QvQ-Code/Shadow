@@ -158,17 +158,31 @@ header {
     /* overflow: hidden; */
 }
 
-.container .box-element {
+.container .box-element,
+.container .box-classes,
+.container .box-star {
     width: auto !important;
     display: flex;
     align-items: center;
     padding: 0 10px 0 5px;
 }
 
-.container .box-element .icon {
+.container .box-star {
+    padding: 0 10px;
+}
+
+.container .box-element .icon,
+.container .box-classes .icon,
+.container .box-star .icon {
     margin-right: 10px;
     width: 20px;
     height: 20px;
+}
+
+.container .box-star .icon {
+    margin: 0 0 0 5px;
+    width: 15px;
+    height: 15px;
 }
 
 #particles-js {
@@ -177,6 +191,10 @@ header {
 #particles-js canvas {
     opacity: .2;
     z-index: -1;
+}
+.active {
+    border: 1px solid #ffffff !important;
+    border-radius: 1rem !important;
 }
 .container .active {
     border: 1px solid #ffffff !important;
@@ -193,9 +211,14 @@ header {
     padding: 2px;
 }
 
-.container .box-element:hover {
+.container .box-element:hover,
+.container .box-classes:hover {
     border-radius: 1rem !important;
     padding: 0 10px 0 5px !important;
+}
+.container .box-star:hover {
+    border-radius: 1rem !important;
+    padding: 0 10px 0 10px !important;
 }
 
 .container .icon {

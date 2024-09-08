@@ -6,6 +6,58 @@ $(document).ready(function (){
         $(parent).addClass("active");
     });
 
+    function wordToNumber(word) {
+        return wordToNumberMap[word.toLowerCase()] || word;  // Return number or original if no match
+    }
+
+    function load_star(star) {
+        const $container = $('#star_container'); 
+
+        $container.empty();
+
+        $.each(star, function(i, star) {
+            const starName = star.name.replace(/\s+/g, '_');
+            const $iconBox = $('<span>', { 
+                class: `icon-box box-star`, 
+                'data-star': starName 
+            });
+            const $icon = $('<span>', { class: 'icon' });
+            const $img = $('<img>', {
+                src: `/images/icons/star.png`,
+                alt: star.name 
+            });
+
+            $icon.append($img);
+            $iconBox.append(wordToNumber(star.name));
+            $iconBox.append($icon);
+            $container.append($iconBox);
+        });
+    }
+
+    function load_classes(classes) {
+        const $container = $('#classes_container'); 
+
+        $container.empty();
+
+        $.each(classes, function(i, classes) {
+            const classesName = classes.name.replace(/\s+/g, '_').toLowerCase();
+            const $iconBox = $('<span>', { 
+                class: `icon-box box-classes`, 
+                'data-classes': classesName 
+            });
+            const $icon = $('<span>', { class: 'icon' });
+            const $img = $('<img>', {
+                src: `/images/icons/${classesName}.png`,
+                alt: classes.name 
+            });
+
+            $icon.append($img);
+            $iconBox.append($icon);
+            $iconBox.append(classes.name);
+            $container.append($iconBox);
+        });
+    }
+
     function load_elements(element) {
         const $container = $('#element_container'); 
 
@@ -92,7 +144,7 @@ $(document).ready(function (){
     
         $.each(uniqueCharacters, function(i, character) {
             const characterName = character.name.replace(/\s+/g, '_');
-            const $charBox = $('<div>', { class: character.element.toLowerCase() + ' char-box ' + character.trait.map(trait => trait.replace(/\s+/g, '_')).join(' ').toLowerCase() });
+            const $charBox = $('<div>', { class: character.star + " " + character.role.replace(/\s+/g, '_').toLowerCase() + " " + character.element.toLowerCase() + ' char-box ' + character.trait.map(trait => trait.replace(/\s+/g, '_')).join(' ').toLowerCase() });
             // const $figure = $('<div>', { class: 'figure' });
             // const $img = $('<img>', {
             //     src: `/images/characters/${characterName}.png`,
@@ -109,21 +161,26 @@ $(document).ready(function (){
         });
     }
     
+    load_star(star);
+    load_classes(classes);
     load_elements(element);
     load_buffs(buffs);
     load_debuffs(debuffs);
     load_characters(characters);
 
     const selectedElements = {
+        star: [],
+        classes: [],
         elements: [],
         buffs: [],
         debuffs: []
     };
     
     function updateCharBoxes() {
-        const { elements, buffs, debuffs } = selectedElements;
-
-        if (elements.length === 0 && buffs.length === 0 && debuffs.length === 0) {
+        const { star, classes, elements, buffs, debuffs } = selectedElements;
+    
+        // Jika tidak ada item yang dipilih, tampilkan semua character box dan hitung total
+        if (star.length === 0 && classes.length === 0 && elements.length === 0 && buffs.length === 0 && debuffs.length === 0) {
             $('.char-box').fadeIn();
             $('#character_count').text("Characters: " + $('.char-box').length);
             $('.container').removeClass("active");
@@ -132,15 +189,20 @@ $(document).ready(function (){
     
         let visibleCount = 0;
     
+        // Iterasi setiap .char-box
         $('.char-box').each(function() {
             const $charBox = $(this);
-            const charBoxClasses = $charBox.attr('class').split(/\s+/);
+            const charBoxClasses = $charBox.attr('class').split(/\s+/);  // Split classes into an array
     
+            // Pengecekan sesuai dengan selectedElements yang diaktifkan
+            const matchesStar = star.length === 0 || star.some(item => charBoxClasses.includes(item));
+            const matchesClasses = classes.length === 0 || classes.some(item => charBoxClasses.includes(item));
             const matchesElement = elements.length === 0 || elements.some(item => charBoxClasses.includes(item));
             const matchesBuff = buffs.length === 0 || buffs.some(item => charBoxClasses.includes(item));
             const matchesDebuff = debuffs.length === 0 || debuffs.some(item => charBoxClasses.includes(item));
     
-            if (matchesElement && matchesBuff && matchesDebuff) {
+            // Tampilkan atau sembunyikan .char-box jika semua kriteria cocok
+            if (matchesStar && matchesClasses && matchesElement && matchesBuff && matchesDebuff) {
                 $charBox.fadeIn();
                 visibleCount++;
             } else {
@@ -152,40 +214,45 @@ $(document).ready(function (){
     }
     
     function handleSelection($element, selectedArray, type) {
-        const elementName = $element.data(type);
+        const elementName = $element.data(type);  // Ensure data-type is correct
     
         if (selectedArray.includes(elementName)) {
-            selectedArray.splice(selectedArray.indexOf(elementName), 1);
+            selectedArray.splice(selectedArray.indexOf(elementName), 1);  // Remove element from array
             $element.removeClass('active');
         } else {
-            selectedArray.push(elementName);
+            selectedArray.push(elementName);  // Add element to array
             $element.addClass('active');
         }
     
-        updateCharBoxes();
+        updateCharBoxes();  // Update the visible character boxes
     }
     
-    $(document).on('click', '.box-element, .box-buff, .box-debuff', function() {
+    $(document).on('click', '.box-element, .box-buff, .box-debuff, .box-star, .box-classes', function() {
         const $this = $(this);
-    
-        if ($this.hasClass('box-element')) {
+        
+        // Handle clicks based on the type of box
+        if ($this.hasClass('box-classes')) {
+            handleSelection($this, selectedElements.classes, 'classes');  // Corrected classes selection
+        } else if ($this.hasClass('box-element')) {
             handleSelection($this, selectedElements.elements, 'element');
         } else if ($this.hasClass('box-buff')) {
             handleSelection($this, selectedElements.buffs, 'buff');
         } else if ($this.hasClass('box-debuff')) {
             handleSelection($this, selectedElements.debuffs, 'debuff');
+        } else if ($this.hasClass('box-star')) {
+            handleSelection($this, selectedElements.star, 'star');
         }
-    });     
-
+    });
+    
     $('#character_search').on('keyup', function() {
         var searchValue = $(this).val().toLowerCase();
-
+    
         $(this).addClass("active");
-
-        if(searchValue.length <= 0){
+    
+        if (searchValue.length <= 0) {
             $(this).removeClass("active");
         }
-
+    
         $('.char-box').each(function() {
             var charName = $(this).find('.name').text().toLowerCase();
             
@@ -196,5 +263,6 @@ $(document).ready(function (){
             }
         });
     });
+    
 });
 
