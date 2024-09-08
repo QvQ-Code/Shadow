@@ -183,6 +183,10 @@ header {
     border-radius: 1rem !important;
 }
 
+.main-wrapper .right-main .search .active {
+    border-radius: .25rem !important;
+}
+
 .container .icon-box:hover {
     border-radius: 2rem;
     padding: 2px;
