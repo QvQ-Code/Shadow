@@ -178,12 +178,13 @@ header {
     opacity: .2;
     z-index: -1;
 }
-.active {
+.container .active {
     border: 1px solid #ffffff !important;
     border-radius: 1rem !important;
 }
 
 .main-wrapper .right-main .search .active {
+    border: 1px solid #ffffff !important;
     border-radius: .25rem !important;
 }
 
