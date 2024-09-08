@@ -241,14 +241,14 @@ header {
 .character .char-box {
     cursor:zoom-in;
     width: 150px;
-    min-height: 40px;
+    min-height: 210px;
     overflow: hidden;
     border-radius: .25rem;
     position: relative;
     background-color: #2A313D;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
     margin: 10px;
     border: 2px solid black;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
@@ -268,6 +268,25 @@ header {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ffffff",GradientType=1);
 }
 
+.character .char-box .trait {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color: black;
+    margin: 3px 5px;
+    font-weight: 500;
+    border-radius: .25rem;
+    padding: 3px 5px;
+    background-color: white;
+}
+
+.character .char-box .trait img {
+    margin-right: 5px;
+    width: 17px;
+    height: 17px;
+    display: block;
+}
+
 .character .char-box .figure img {
     width: 100%;
     display: block;
@@ -282,11 +301,7 @@ header {
 }
 
 .character .char-box .name {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    height: 36px;
+    min-height: 37px;
     padding: 0 10px;
     /* background-image: url("../images/background/background.png"); */
     background-color: #222;

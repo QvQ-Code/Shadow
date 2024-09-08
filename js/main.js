@@ -6,8 +6,15 @@ $(document).ready(function (){
         $(parent).addClass("active");
     });
 
-    function wordToNumber(word) {
-        return wordToNumberMap[word.toLowerCase()] || word;  // Return number or original if no match
+    function safeToLowerCase(value) {
+        if (typeof value === 'string' && value.length > 0) {
+            return value.toLowerCase();
+        }
+        return '';  // Return an empty string or handle it as needed
+    }
+    
+    function numberToWord(number) {
+        return numberToWordMap[number] || number;  // Return word or original number if no match
     }
 
     function load_star(star) {
@@ -16,10 +23,10 @@ $(document).ready(function (){
         $container.empty();
 
         $.each(star, function(i, star) {
-            const starName = star.name.replace(/\s+/g, '_');
+            const starName = star.name;
             const $iconBox = $('<span>', { 
                 class: `icon-box box-star`, 
-                'data-star': starName 
+                'data-star': numberToWord(starName) 
             });
             const $icon = $('<span>', { class: 'icon' });
             const $img = $('<img>', {
@@ -28,7 +35,7 @@ $(document).ready(function (){
             });
 
             $icon.append($img);
-            $iconBox.append(wordToNumber(star.name));
+            $iconBox.append(star.name);
             $iconBox.append($icon);
             $container.append($iconBox);
         });
@@ -133,7 +140,7 @@ $(document).ready(function (){
         const $count = $('#character_count');
     
         $container.empty();
-
+    
         characters.sort((a, b) => a.name.localeCompare(b.name));
     
         const uniqueCharacters = characters.filter((character, index, self) =>
@@ -144,19 +151,27 @@ $(document).ready(function (){
     
         $.each(uniqueCharacters, function(i, character) {
             const characterName = character.name.replace(/\s+/g, '_');
-            const $charBox = $('<div>', { class: character.star + " " + character.role.replace(/\s+/g, '_').toLowerCase() + " " + character.element.toLowerCase() + ' char-box ' + character.trait.map(trait => trait.replace(/\s+/g, '_')).join(' ').toLowerCase() });
+            const $charBox = $('<div>', { class: safeToLowerCase(numberToWord(character.star)) + " " + character.role.replace(/\s+/g, '_').toLowerCase() + " " + character.element.toLowerCase() + ' char-box ' + character.trait.map(trait => trait.replace(/\s+/g, '_')).join(' ').toLowerCase() });
             // const $figure = $('<div>', { class: 'figure' });
             // const $img = $('<img>', {
             //     src: `/images/characters/${characterName}.png`,
             //     alt: characters.name 
             // });
             const $name = $('<div>', { class: 'name' });
-
             $name.append('<img src="/images/icons/' + character.element.toLowerCase() + '.png">');
             $name.append(character.name);
             // $figure.append($img);
             // $charBox.append($figure);
+            // Create and append trait elements
+            const $traits = $('<div>', { class: 'traits' });
+            character.trait.forEach(trait => {
+                if (trait) { // Check if trait is not an empty string
+                    $traits.append('<div class="trait"><img src="/images/icons/' + trait.replace(/\s+/g, '_') + '.png"><span>' + trait + '</span></div>');
+                }
+            });
+    
             $charBox.append($name);
+            $charBox.append($traits);
             $container.append($charBox);
         });
     }
