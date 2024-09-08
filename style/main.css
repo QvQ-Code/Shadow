@@ -1,0 +1,295 @@
+:root {
+    --primary-color: #181718;
+    --secondary-color: #000000;
+    --accent-color: #DCFE00;
+    --font-size-base: 16px;
+    --font-color-base: #FFFFFF;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+body {
+    background-image: url("/images/background/background.png");
+    background-color: var(--primary-color);
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+    height: 55px;
+    background-color: var(--secondary-color);
+    color: var(--font-color-base);
+}
+
+.header-wrapper {
+    height: 100%;
+    margin: 0 10%;
+    display: flex;
+    align-items: center;
+}
+
+.header-wrapper .image {
+    width: 40px;
+    height: 40px;
+    border-radius: .25rem;
+    overflow: hidden;
+    margin-right: 20px;
+}
+
+.header-wrapper .image img {
+    width: 100%;
+    display: block;
+}
+
+.header-wrapper h1 {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.sticky {
+    position: sticky;
+    top: 95px;
+}
+
+.main-wrapper {
+    margin-top: 55px;
+    padding: 40px 10%;
+    display: flex;
+    overflow: auto;
+}
+
+.main-wrapper {
+    position: relative;
+}
+
+.main-wrapper .particles-js-canvas-el {
+    position: absolute;
+    right: 0;
+    left: 0;
+}
+
+.main-wrapper .left-main {
+    width: 32%;
+    margin-right: 20px;
+    height: max-content;
+}
+
+.main-wrapper .right-main {
+    width: 76%;
+    margin-left: 20px;
+    background-color: #dfdfdf36;
+    border-radius: .25rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    height: max-content;
+    overflow: hidden;
+}
+
+.main-wrapper .right-main .detail {
+    background-color: #111;
+    color: white;
+    font-weight: bold;
+    font-size: 10px;
+    padding: 10px 20px;
+}
+
+.main-wrapper .right-main .search {
+    width: 100%;
+    display: flex;
+    padding: 10px 20px 0 20px;
+}
+
+.main-wrapper .right-main .search input {
+    width: 100%;
+    outline: none;
+    height: 40px;
+    border: 1px solid transparent;
+    padding: 0 20px;
+    background: #4e4d4e;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    border-radius: .25rem;
+    color: white;
+}
+
+.main-wrapper .right-main .search input::placeholder {
+    color: white;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #dfdfdf36;
+    border-radius: .25rem;
+    padding: 15px;
+    margin-bottom: 30px;
+    border: 1px solid var(--primary-color);
+    transition: all .2s ease-in-out;
+    position: relative;
+    z-index: 2;
+}
+
+.container:last-child {
+    margin-bottom: 0;
+}
+
+.container:hover {
+    border: 1px solid #ffffff;
+}
+
+.container .icon-box {
+    width: 30px;
+    height: 30px;
+    border-radius: .25rem;  
+    background-color: #222122;
+    margin: 5px;
+    padding: 5px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    border: 1px solid #ffffff00;
+    color: white;
+    text-transform: capitalize;
+    /* font-weight: bold; */
+    font-size: 12px;
+    /* overflow: hidden; */
+}
+
+.container .box-element {
+    width: auto !important;
+    display: flex;
+    align-items: center;
+    padding: 0 10px 0 5px;
+}
+
+.container .box-element .icon {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+#particles-js {
+    opacity: 1 !important;
+}
+#particles-js canvas {
+    opacity: .2;
+    z-index: -1;
+}
+.active {
+    border: 1px solid #ffffff !important;
+    border-radius: 1rem !important;
+}
+
+.container .icon-box:hover {
+    border-radius: 2rem;
+    padding: 2px;
+}
+
+.container .box-element:hover {
+    border-radius: 1rem !important;
+    padding: 0 10px 0 5px !important;
+}
+
+.container .icon {
+    border-radius: .25rem;
+    overflow: hidden;
+}
+
+.container .icon img {
+    width: 100%;
+    height: 100%;
+    display: block;    
+}
+
+.character {
+    display: flex;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+.character .char-box {
+    cursor:zoom-in;
+    width: 150px;
+    min-height: 40px;
+    overflow: hidden;
+    border-radius: .25rem;
+    position: relative;
+    background-color: #2A313D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    border: 2px solid black;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.character .char-box .figure {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: rgb(255,255,255);
+    background: -moz-radial-gradient(circle, rgba(255,255,255,0.10407913165266103) 0%, rgba(255,255,255,0.06206232492997199) 51%, rgba(255,255,255,0) 100%);
+    background: -webkit-radial-gradient(circle, rgba(255,255,255,0.10407913165266103) 0%, rgba(255,255,255,0.06206232492997199) 51%, rgba(255,255,255,0) 100%);
+    background: radial-gradient(circle, rgba(255,255,255,0.10407913165266103) 0%, rgba(255,255,255,0.06206232492997199) 51%, rgba(255,255,255,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ffffff",GradientType=1);
+}
+
+.character .char-box .figure img {
+    width: 100%;
+    display: block;
+    height: auto;
+    position: relative;
+}
+
+.character .char-box .name img {
+    display: block;
+    width: 20px;
+    height: 20px; margin-right: 10px;
+}
+
+.character .char-box .name {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 36px;
+    padding: 0 10px;
+    /* background-image: url("../images/background/background.png"); */
+    background-color: #222;
+    opacity: .9;
+    color: white;
+    /* text-align: center; */
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: flex-start;
+    font-weight: bold;
+    line-height: 1;
+}
+
+#particles-js {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: .6;
+    z-index: -1;
+}
+
+footer {
+    width: 100%;
+    height: 50px;
+    background-color: var(--secondary-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}

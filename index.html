@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embracing the Shadows</title>
+
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/main.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header>
+        <div class="header-wrapper">
+            <div class="image">
+                <img src="/images/background/shondo.jpg" alt="">
+            </div>
+            <h1>Shadow</h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="main-wrapper"  id="particles-js">
+            <div class="left-main">
+                <div class="sticky"> 
+                    <div class="container element" id="element_container"></div>
+                    <div class="container buff" id="buff_container"></div>
+                    <div class="container debuff" id="debuff_container"></div>
+                </div>
+            </div>
+
+            <div class="right-main">
+                <div class="detail">
+                    <div id="character_count"></div>
+                </div>
+                <div class="search">
+                    <input id="character_search" type="text" placeholder="Search by hero name...">
+                </div>
+                <div class="character" id="character_container"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        All logos, pictures, trademarks and trade names used herein are the property of their respective owners.
+    </footer>
+
+    <script src="/js/data.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/external/particles.js-master/particles.js"></script>
+    <script src="/js/app.js"></script>
+</body>
+</html>
