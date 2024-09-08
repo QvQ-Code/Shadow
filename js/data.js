@@ -37,7 +37,7 @@ const buffs = [
 
 // Array of objects for debuffs
 const debuffs = [
-    { name: "Defense Break"},
+    { name: "Decrease Defense"},
     { name: "Decrease Speed"},
     { name: "Decrease Attack"},
     { name: "Stun"},
