@@ -108,7 +108,7 @@ header {
     width: 100%;
     outline: none;
     height: 40px;
-    border: 1px solid transparent;
+    border: 1px solid #137EBF;
     padding: 0 20px;
     background: #4e4d4e;
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
@@ -268,22 +268,40 @@ header {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ffffff",GradientType=1);
 }
 
+.character .char-box .skills .skill {
+    background-color: white;
+    margin: 5px;
+    border-radius: .25rem;
+    padding: 0 5px 2px 5px;
+    font-weight: bold;
+}
+
+.character .char-box .skills .skill .skill-num {
+    font-size: 10px;
+    color: #8d1717;
+}
+
+.character .char-box .skills .skill .skill-name {
+    font-size: 11px;
+    margin-bottom: 2px;
+}
+
 .character .char-box .trait {
     display: flex;
     align-items: center;
-    font-size: 12px;
+    font-size: 11px;
     color: black;
-    margin: 3px 5px;
+    margin: 0 0 2px 0;
     font-weight: 500;
     border-radius: .25rem;
-    padding: 3px 5px;
+    padding: 0;
     background-color: white;
 }
 
 .character .char-box .trait img {
     margin-right: 5px;
-    width: 17px;
-    height: 17px;
+    width: 16px;
+    height: 16px;
     display: block;
 }
 
@@ -296,8 +314,9 @@ header {
 
 .character .char-box .name img {
     display: block;
-    width: 20px;
-    height: 20px; margin-right: 10px;
+    width: 16px;
+    height: 16px; 
+    margin-right: 5px;
 }
 
 .character .char-box .name {

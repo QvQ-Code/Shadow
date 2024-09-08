@@ -135,46 +135,130 @@ $(document).ready(function (){
         });
     }
 
+    // function load_characters(characters) {
+    //     const $container = $('#character_container'); 
+    //     const $count = $('#character_count');
+    
+    //     $container.empty();
+    
+    //     characters.sort((a, b) => a.name.localeCompare(b.name));
+    
+    //     const uniqueCharacters = characters.filter((character, index, self) =>
+    //         index === self.findIndex(c => c.name === character.name)
+    //     );
+    
+    //     $count.text("Characters: " + uniqueCharacters.length);
+    
+    //     $.each(uniqueCharacters, function(i, character) {
+    //         const characterName = character.name.replace(/\s+/g, '_');
+    //         const $charBox = $('<div>', { class: safeToLowerCase(numberToWord(character.star)) + " " + character.role.replace(/\s+/g, '_').toLowerCase() + " " + character.element.toLowerCase() + ' char-box ' + character.trait.map(trait => trait.replace(/\s+/g, '_')).join(' ').toLowerCase() });
+    //         // const $figure = $('<div>', { class: 'figure' });
+    //         // const $img = $('<img>', {
+    //         //     src: `/images/characters/${characterName}.png`,
+    //         //     alt: characters.name 
+    //         // });
+    //         const $name = $('<div>', { class: 'name' });
+    //         $name.append('<img src="/images/icons/' + character.element.toLowerCase() + '.png">');
+    //         $name.append(character.name);
+    //         // $figure.append($img);
+    //         // $charBox.append($figure);
+    //         // Create and append trait elements
+    //         const $traits = $('<div>', { class: 'traits' });
+    //         character.skills.forEach(trait => {
+    //             if (skills) { // Check if trait is not an empty string
+    //                 // $skills.append('<div class="trait"><img src="/images/icons/' + trait.replace(/\s+/g, '_') + '.png"><span>' + trait + '</span></div>');
+    //             }
+    //         });
+    
+    //         $charBox.append($name);
+    //         $charBox.append($traits);
+    //         $container.append($charBox);
+    //     });
+    // }
+
     function load_characters(characters) {
-        const $container = $('#character_container'); 
+        const $container = $('#character_container');
         const $count = $('#character_count');
     
         $container.empty();
     
         characters.sort((a, b) => a.name.localeCompare(b.name));
-    
+        
         const uniqueCharacters = characters.filter((character, index, self) =>
             index === self.findIndex(c => c.name === character.name)
         );
-    
+        
         $count.text("Characters: " + uniqueCharacters.length);
     
         $.each(uniqueCharacters, function(i, character) {
+            // Print traits as classes for the character
+            const allTraits = getAllTraits(character); // Get traits for this specific character
             const characterName = character.name.replace(/\s+/g, '_');
-            const $charBox = $('<div>', { class: safeToLowerCase(numberToWord(character.star)) + " " + character.role.replace(/\s+/g, '_').toLowerCase() + " " + character.element.toLowerCase() + ' char-box ' + character.trait.map(trait => trait.replace(/\s+/g, '_')).join(' ').toLowerCase() });
-            // const $figure = $('<div>', { class: 'figure' });
-            // const $img = $('<img>', {
-            //     src: `/images/characters/${characterName}.png`,
-            //     alt: characters.name 
-            // });
+            const $charBox = $('<div>', { 
+                class: `${safeToLowerCase(numberToWord(character.star))} ${character.role.replace(/\s+/g, '_').toLowerCase()} ${character.element.toLowerCase()} char-box ${allTraits}`
+            });
+    
             const $name = $('<div>', { class: 'name' });
-            $name.append('<img src="/images/icons/' + character.element.toLowerCase() + '.png">');
+            $name.append(`<img src="/images/icons/${character.element.toLowerCase()}.png">`);
             $name.append(character.name);
-            // $figure.append($img);
-            // $charBox.append($figure);
-            // Create and append trait elements
-            const $traits = $('<div>', { class: 'traits' });
-            character.trait.forEach(trait => {
-                if (trait) { // Check if trait is not an empty string
-                    $traits.append('<div class="trait"><img src="/images/icons/' + trait.replace(/\s+/g, '_') + '.png"><span>' + trait + '</span></div>');
+    
+            // Create and append skills
+            const $skills = $('<div>', { class: 'skills' });
+    
+            // Iterate over skills and their traits
+            $.each(character.skills, function(skillKey, skill) {
+                const skillNumber = skillKey.split('_')[1]; // Extract number from skill key (s1, s2, s3)
+                const $skillBox = $('<div>', { class: `skill s${skillNumber}` });
+                
+                const $skillName = $('<div>', { class: 'skill-name' }).text(skill.name || 'Unnamed Skill');
+                const $skillNum = $('<span>', { class: 'skill-num' }).text(`Skill ${skillNumber}`);
+                
+                $skillBox.append($skillNum).append($skillName);
+            
+                // Create and append traits for the skill
+                const $traits = $('<div>', { class: 'traits' });
+                if (Array.isArray(skill.trait) && skill.trait.length > 0) {
+                    $.each(skill.trait, function(index, trait) {
+                        if (trait) {
+                            $traits.append(`<div class="trait"><img src="/images/icons/${trait.replace(/\s+/g, '_')}.png"><span>${trait}</span></div>`);
+                        }
+                    });
                 }
+                $skillBox.append($traits);
+                $skills.append($skillBox);
             });
     
             $charBox.append($name);
-            $charBox.append($traits);
+            $charBox.append($skills);
             $container.append($charBox);
         });
     }
+    
+    function getAllTraits(character) {
+        // Use a Set to store unique traits
+        const allTraitsSet = new Set();
+    
+        // Add character traits to the Set
+        if (Array.isArray(character.trait)) {
+            $.each(character.trait, function(i, trait) {
+                allTraitsSet.add(trait);
+            });
+        }
+    
+        // Add skill traits to the Set
+        $.each(character.skills, function(skillKey, skill) {
+            if (Array.isArray(skill.trait)) {
+                $.each(skill.trait, function(i, trait) {
+                    allTraitsSet.add(trait);
+                });
+            }
+        });
+        
+        // Convert Set to Array and sort
+        const allTraits = Array.from(allTraitsSet).sort();
+        return allTraits.map(trait => trait.replace(/\s+/g, '_')).join(' ').toLowerCase();
+    }
+       
     
     load_star(star);
     load_classes(classes);
@@ -215,7 +299,7 @@ $(document).ready(function (){
             const matchesElement = elements.length === 0 || elements.some(item => charBoxClasses.includes(item));
             const matchesBuff = buffs.length === 0 || buffs.some(item => charBoxClasses.includes(item));
             const matchesDebuff = debuffs.length === 0 || debuffs.some(item => charBoxClasses.includes(item));
-    
+            
             // Tampilkan atau sembunyikan .char-box jika semua kriteria cocok
             if (matchesStar && matchesClasses && matchesElement && matchesBuff && matchesDebuff) {
                 $charBox.fadeIn();
