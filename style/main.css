@@ -57,6 +57,11 @@ header {
     font-weight: bold;
     font-size: 20px;
 }
+@media(max-width: 892px){
+    .header-wrapper h1 {
+        font-size: 15px;
+    }
+}
 
 .sticky {
     position: sticky;
@@ -68,6 +73,11 @@ header {
     padding: 40px 10%;
     display: flex;
     overflow: auto;
+}
+@media(max-width: 892px){
+    .main-wrapper {
+        padding: 20px;
+    }
 }
 
 .main-wrapper {
@@ -85,6 +95,16 @@ header {
     margin-right: 20px;
     height: max-content;
 }
+@media(max-width: 892px){
+    .main-wrapper .left-main {
+        width: 100%;
+        position: fixed;
+        background-color: var(--primary-color);
+        z-index: 2;
+        top: 0;
+        right: -110%;
+    }
+}
 
 .main-wrapper .right-main {
     width: 76%;
@@ -95,6 +115,14 @@ header {
     height: max-content;
     overflow: hidden;
 }
+@media(max-width: 892px){
+    .main-wrapper .right-main {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+
 
 .main-wrapper .right-main .detail {
     background-color: #111;
@@ -247,6 +275,12 @@ header {
     padding: 10px;
     flex-wrap: wrap;
 }
+@media(max-width: 892px){
+    .character {
+        justify-content: space-between;
+        padding: 20px;
+    }
+}
 
 .character .char-box {
     cursor: zoom-in;
@@ -262,6 +296,12 @@ header {
     margin: 10px;
     border: 2px solid black;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+@media(max-width: 892px){
+    .character .char-box {
+        width: 140px;
+        margin: 0;
+    }
 }
 
 .character .char-box .figure {
