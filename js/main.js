@@ -345,7 +345,7 @@ $(document).ready(function (){
     });
     
     $('#character_search').on('keyup', function() {
-        var searchValue = $(this).val().toLowerCase();
+        var searchValue = $(this).val().toLowerCase().trim();
     
         $(this).addClass("active");
     
@@ -353,16 +353,28 @@ $(document).ready(function (){
             $(this).removeClass("active");
         }
     
+        // Split the input by commas and remove any empty strings
+        var searchKeywords = searchValue.split(',').map(function(keyword) {
+            return keyword.trim();
+        }).filter(function(keyword) {
+            return keyword.length > 0;
+        });
+    
         $('.char-box').each(function() {
             var charName = $(this).find('.name').text().toLowerCase();
-            
-            if (charName.includes(searchValue)) {
+            // Check if at least one keyword matches
+            var match = searchKeywords.some(function(keyword) {
+                return charName.includes(keyword);
+            });
+    
+            if (match) {
                 $(this).show();
             } else {
                 $(this).hide();
             }
         });
     });
+        
     
 });
 
