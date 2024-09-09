@@ -95,6 +95,8 @@ const debuffs = [
   { name: "Cannot Counterattack" },
   { name: "Block" },
   { name: "Random Debuff" },
+
+  { name: "Extinction" },
 ];
 
 // Array of objects for abilities
@@ -1040,41 +1042,214 @@ const characters = [
     },
   },
 
-  // {
-  //   name: "Sol",
-  //   star: 5,
-  //   role: "Warrior",
-  //   element: "Fire",
-  //   trait: ["Extra Turn", "Silence", "Cannot Buff"]
-  // },
-  // {
-  //   name: "Lilibet",
-  //   star: 5,
-  //   role: "Warrior",
-  //   element: "Fire",
-  //   trait: ["Cannot Buff", "Bleed", "Skill Nullifier"]
-  // },
-  // {
-  //   name: "Baiken",
-  //   star: 5,
-  //   role: "Thief",
-  //   element: "Fire",
-  //   trait: ["Bleed"]
-  // },
-  // {
-  //   name: "Kawerik",
-  //   star: 5,
-  //   role: "Mage",
-  //   element: "Fire",
-  //   trait: ["Silence", "Stealth", "Increase Speed"]
-  // },
-  // {
-  //   name: "Iseria",
-  //   star: 5,
-  //   role: "Ranger",
-  //   element: "Earth",
-  //   trait: ["Decrease Defense", "Cannot Buff"]
-  // },
+  {
+    name: "Lilibet",
+    star: 5,
+    role: "Warrior",
+    element: "Earth",
+    imprint: {
+      "release": "Critical Hit Chance",
+      "concentration": "Attack",
+    },
+    skills: {
+      skill_1: {
+        number: 1,
+        type: "",
+        name: "Slice-Slice",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Cannot Buff"],
+      },
+      skill_2: {
+        number: 2,
+        type: "",
+        name: "Snip-Snip",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Bleed"],
+      },
+      skill_3: {
+        number: 3,
+        type: "",
+        name: "Soul Cutter",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Skill Nullifier", "Extinction"],
+      },
+    },
+  },
+
+  {
+    name: "Baiken",
+    star: 5,
+    role: "Thief",
+    element: "Earth",
+    imprint: {
+      "release": "Attack",
+      "concentration": "Critical Hit Chance",
+    },
+    skills: {
+      skill_1: {
+        number: 1,
+        type: "",
+        name: "Tatami Gaeshi",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Bleed"],
+      },
+      skill_2: {
+        number: 2,
+        type: "",
+        name: "Tsurane Sanzu-watashi",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Bleed", "Extra Turn"],
+      },
+      skill_3: {
+        number: 3,
+        type: "",
+        name: "Garyo Tensei",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Bleed", "Detonate"],
+      },
+    },
+  },
+
+  {
+    name: "Kawerik",
+    star: 5,
+    role: "Mage",
+    element: "Fire",
+    imprint: {
+      "release": "Attack",
+      "concentration": "Attack",
+    },
+    skills: {
+      skill_1: {
+        number: 1,
+        type: "",
+        name: "Spatial Relocation",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Silence"],
+      },
+      skill_2: {
+        number: 2,
+        type: "",
+        name: "Dimensional Corridor",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Stealth", "Increase Speed"],
+      },
+      skill_3: {
+        number: 3,
+        type: "",
+        name: "Dimensional Explosion",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Silence", "Penetrate"],
+      },
+    },
+  },
+
+  {
+    name: "Diene",
+    star: 5,
+    role: "Soul Weaver",
+    element: "ice",
+    imprint: {
+      "release": "Attack",
+      "concentration": "Health",
+    },
+    skills: {
+      skill_1: {
+        number: 1,
+        type: "",
+        name: "Light of Judgment",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Silence"],
+      },
+      skill_2: {
+        number: 2,
+        type: "",
+        name: "Blessings of th Goddess",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Barrier"],
+      },
+      skill_3: {
+        number: 3,
+        type: "",
+        name: "Saint's Prayer",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Increase Attack", "Increase Critical Hit Resistance"],
+      },
+    },
+  },
+
   // {
 
   // {

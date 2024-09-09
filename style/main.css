@@ -269,7 +269,7 @@ header {
 }
 
 .character .char-box .skills .skill {
-    background-color: white;
+    background-color: #e4e8f7;
     margin: 5px;
     border-radius: .25rem;
     padding: 0 5px 2px 5px;
@@ -295,7 +295,6 @@ header {
     font-weight: 500;
     border-radius: .25rem;
     padding: 0;
-    background-color: white;
 }
 
 .character .char-box .trait img {
@@ -305,6 +304,7 @@ header {
     display: block;
     border-radius: .25rem;
     overflow: hidden;
+    flex-shrink: 0;
 }
 
 .character .char-box .figure img {
