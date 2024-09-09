@@ -26,7 +26,6 @@ const element = [
   { name: "dark" },
 ];
 
-// Array of objects for buffs
 const buffs = [
   { name: "Increase Attack" },
   { name: "Increase Defense" },
@@ -54,13 +53,14 @@ const buffs = [
   { name: "Escort" },
   { name: "Exploiting Weak Points" },
 
-  // Undispellable
+  
   { name: "Idol" },
   { name: "Vigor" },
   { name: "Spirit's Blessing" },
   { name: "Ice Cream" },
   { name: "Indomitable" },
   { name: "Rage" },
+
   { name: "Dual Attack" },
   { name: "Penetrate" },
   { name: "Extra Turn" },
@@ -68,7 +68,6 @@ const buffs = [
   { name: "Random Buff" },
 ];
 
-// Array of objects for debuffs
 const debuffs = [
   { name: "Decrease Defense" },
   { name: "Decrease Speed" },
@@ -100,15 +99,15 @@ const debuffs = [
   { name: "Block" },
   { name: "Random Debuff" },
 
+  // { name: "Soul Steal" },
+  // { name: "Injury" },
   { name: "Extinction" },
 ];
 
-// Array of objects for abilities
 const special = [
 
 ];
 
-// Array of objects for characters
 const characters = [
   {
     name: "Ras",
@@ -2706,6 +2705,266 @@ const characters = [
           effect: "",
         },
         trait: ["Indomitable", "Extra Turn"],
+      },
+    },
+  },
+
+  {
+    name: "Enott",
+    star: 3,
+    role: "Warrior",
+    element: "Ice",
+    imprint: {
+      "release": "Attack",
+      "concentration": "Ciritcal Hit Chance",
+    },
+    skills: {
+      skill_1: {
+        number: 1,
+        type: "",
+        name: "Smash",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Bleed"],
+      },
+      skill_2: {
+        number: 2,
+        type: "",
+        name: "Judgment",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Decrease Defense", "Cannot Buff"],
+      },
+      skill_3: {
+        number: 3,
+        type: "",
+        name: "Prepare Judgment",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Increase Attack", "Increase Critical Hit Chance"],
+      },
+    },
+  },
+
+  {
+    name: "Jane",
+    star: 3,
+    role: "Mage",
+    element: "Ice",
+    imprint: {
+      "release": "Attack",
+      "concentration": "Effectiviness",
+    },
+    skills: {
+      skill_1: {
+        number: 1,
+        type: "",
+        name: "Cold Blow",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Stun"],
+      },
+      skill_2: {
+        number: 2,
+        type: "",
+        name: "Coerce",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Frostbite", "Immunity"],
+      },
+      skill_3: {
+        number: 3,
+        type: "",
+        name: "Cold Snap",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Decrease Defense"],
+      },
+    },
+  },
+
+  {
+    name: "Byblis",
+    star: 5,
+    role: "Ranger",
+    element: "Ice",
+    imprint: {
+      "release": "Health",
+      "concentration": "Effectiviness",
+    },
+    skills: {
+      skill_1: {
+        number: 1,
+        type: "",
+        name: "Floral Arrangement",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Silence"],
+      },
+      skill_2: {
+        number: 2,
+        type: "",
+        name: "Gardener's Secret",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Decrease Defense"],
+      },
+      skill_3: {
+        number: 3,
+        type: "",
+        name: "A Larunda's Hospitality",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Decrease Hit Chance", "Soul Steal", "Barrier"],
+      },
+    },
+  },
+
+  {
+    name: "Blooming Lidica",
+    star: 5,
+    role: "Thief",
+    element: "Earth",
+    imprint: {
+      "release": "Attack",
+      "concentration": "Health",
+    },
+    skills: {
+      skill_1: {
+        number: 1,
+        type: "",
+        name: "Twirling Thorns",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Stun"],
+      },
+      skill_2: {
+        number: 2,
+        type: "",
+        name: "Seductive Scent",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Cannot Buff"],
+      },
+      skill_3: {
+        number: 3,
+        type: "",
+        name: "Fruit of Ecstasy",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Skill Nullifier", "Penetrate"],
+      },
+    },
+  },
+
+  {
+    name: "Blooming Lidica",
+    star: 5,
+    role: "Thief",
+    element: "Earth",
+    imprint: {
+      "release": "Attack",
+      "concentration": "Health",
+    },
+    skills: {
+      skill_1: {
+        number: 1,
+        type: "",
+        name: "Twirling Thorns",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Stun"],
+      },
+      skill_2: {
+        number: 2,
+        type: "",
+        name: "Seductive Scent",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Cannot Buff"],
+      },
+      skill_3: {
+        number: 3,
+        type: "",
+        name: "Fruit of Ecstasy",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Skill Nullifier", "Penetrate"],
       },
     },
   },
