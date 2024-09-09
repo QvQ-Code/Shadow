@@ -53,11 +53,13 @@ const buffs = [
   { name: "Weakness Shared" },
   { name: "Escort" },
   { name: "Exploiting Weak Points" },
+  { name: "Random Buff" },
 
   // Undispellable
   { name: "Idol" },
   { name: "Vigor" },
   { name: "Spirit's Blessing" },
+  { name: "Ice Cream" },
   { name: "Dual Attack" },
   { name: "Penetrate" },
   { name: "Extra Turn" },
@@ -1250,15 +1252,422 @@ const characters = [
     },
   },
 
-  // {
+  {
+    name: "Laia",
+    star: 5,
+    role: "Warrior",
+    element: "Earth",
+    imprint: {
+      "release": "Health",
+      "concentration": "Health",
+    },
+    skills: {
+      skill_1: {
+        number: 1,
+        type: "",
+        name: "Sing with Me!",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Dual Attack"],
+      },
+      skill_2: {
+        number: 2,
+        type: "",
+        name: "Sweet Cheers",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Barrier"],
+      },
+      skill_3: {
+        number: 3,
+        type: "",
+        name: "The Spirit of Rock",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Extra Turn", "Penetrate"],
+      },
+    },
+  },
 
-  // {
-  //   name: "Diene",
-  //   star: 5,
-  //   role: "Soul Weaver",
-  //   element: "Ice",
-  //   trait: ["Barrier", "Increase Attack", "Increase Critical Hit Resistance"]
-  // },
+  {
+    name: "Luluca",
+    star: 5,
+    role: "Mage",
+    element: "Ice",
+    imprint: {
+      "release": "Attack",
+      "concentration": "Attack",
+    },
+    skills: {
+      skill_1: {
+        number: 1,
+        type: "",
+        name: "Wild Wave",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Decrease Defense"],
+      },
+      skill_2: {
+        number: 2,
+        type: "",
+        name: "Rekos's Blessing",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Increase Defense", "Barrier"],
+      },
+      skill_3: {
+        number: 3,
+        type: "",
+        name: "Wave of vengeance",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Decrease Defense"],
+      },
+    },
+  },
+
+  {
+    name: "Zeno",
+    star: 5,
+    role: "Mage",
+    element: "Ice",
+    imprint: {
+      "release": "Effectievness",
+      "concentration": "Defense",
+    },
+    skills: {
+      skill_1: {
+        number: 1,
+        type: "",
+        name: "Black Thron",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Stun"],
+      },
+      skill_2: {
+        number: 2,
+        type: "",
+        name: "Star's Armor",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: [],
+      },
+      skill_3: {
+        number: 3,
+        type: "",
+        name: "Ancient Beast",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Silence", "Bleed"],
+      },
+    },
+  },
+
+  {
+    name: "Ocean Breeze Luluca",
+    star: 5,
+    role: "Soul Weaver",
+    element: "Earth",
+    imprint: {
+      "release": "Health",
+      "concentration": "Effect Resistance",
+    },
+    skills: {
+      skill_1: {
+        number: 1,
+        type: "",
+        name: "Order's in, Just wait!",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: [],
+      },
+      skill_2: {
+        number: 2,
+        type: "",
+        name: "One Luluca's Special!",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Silence", "Decrease Hit Chance"],
+      },
+      skill_3: {
+        number: 3,
+        type: "",
+        name: "This One's on Me",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Increase Defense", "Ice Cream"],
+      },
+    },
+  },
+
+  {
+    name: "Straze",
+    star: 5,
+    role: "Warrior",
+    element: "Dark",
+    imprint: {
+      "release": "Attack",
+      "concentration": "Attack",
+    },
+    skills: {
+      skill_1: {
+        number: 1,
+        type: "",
+        name: "Powerfull Strike",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: [],
+      },
+      skill_2: {
+        number: 2,
+        type: "",
+        name: "Destructive Gaze",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: [],
+      },
+      skill_3: {
+        number: 3,
+        type: "",
+        name: "Star Extinction",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Penetrate", "Invincible"],
+      },
+    },
+  },
+
+  {
+    name: "Zio",
+    star: 5,
+    role: "Mage",
+    element: "Dark",
+    imprint: {
+      "release": "Attack",
+      "concentration": "Effectiveness",
+    },
+    skills: {
+      skill_1: {
+        number: 1,
+        type: "",
+        name: "Let Me Destroy You",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Increase Attack", "Deify", "Penetrate"],
+      },
+      skill_2: {
+        number: 2,
+        type: "",
+        name: "Supreme Authority",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: [],
+      },
+      skill_3: {
+        number: 3,
+        type: "",
+        name: "Bow Down Before Me",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Silence", "deify", "Penetrate"],
+      },
+    },
+  },
+
+  {
+    name: "Belian",
+    star: 5,
+    role: "Knight",
+    element: "Light",
+    imprint: {
+      "release": "Effect Resistance",
+      "concentration": "Health",
+    },
+    skills: {
+      skill_1: {
+        number: 1,
+        type: "",
+        name: "Light of Destruction",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Decrease Speed", "Decrease Hit Chance"],
+      },
+      skill_2: {
+        number: 2,
+        type: "",
+        name: "Shackles of Suppression",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Random Buff"],
+      },
+      skill_3: {
+        number: 3,
+        type: "",
+        name: "Apocalypse",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Provoke", "Increase Defense"],
+      },
+    },
+  },
+
+  {
+    name: "Archdemon's Shadow",
+    star: 5,
+    role: "Mage",
+    element: "Dark",
+    imprint: {
+      "release": "Health",
+      "concentration": "Attack",
+    },
+    skills: {
+      skill_1: {
+        number: 1,
+        type: "",
+        name: "Touch of Chaos",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Seal"],
+      },
+      skill_2: {
+        number: 2,
+        type: "",
+        name: "Twisted Power",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Seal", "Decrease Hit Chance"],
+      },
+      skill_3: {
+        number: 3,
+        type: "",
+        name: "Dissolution",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Decrease Defense", "Burn", "Extra Turn"],
+      },
+    },
+  },
+  
   // {
   //   name: "Angelica",
   //   star: 5,
