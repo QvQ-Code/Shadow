@@ -780,49 +780,266 @@ const characters = [
     },
   },
 
+  {
+    name: "Lilias",
+    star: 5,
+    role: "Knight",
+    element: "Fire",
+    imprint: {
+      "release": "Attack",
+      "concentration": "Health",
+    },
+    skills: {
+      skill_1: {
+        number: 1,
+        type: "",
+        name: "Follow Me! Charge!",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Dual Attack"],
+      },
+      skill_2: {
+        number: 2,
+        type: "",
+        name: "That's Far Enough!",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Provoke", "Barrier"],
+      },
+      skill_3: {
+        number: 3,
+        type: "",
+        name: "Ready, Load, Fire!",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Injury", "Stun"],
+      },
+    },
+  },
 
-  // {
-  //   name: "Ravi",
-  //   star: 5,
-  //   role: "Warrior",
-  //   element: "Fire",
-  //   trait: ["Stun"]
-  // },
-  // {
-  //   name: "Tamarinne",
-  //   star: 5,
-  //   role: "Soul Weaver",
-  //   element: "Fire",
-  //   trait: ["Increase Attack", "Idol", "Extra Turn", "Dual Attack"]
-  // },
-  // {
-  //   name: "Lilias",
-  //   star: 5,
-  //   role: "Knight",
-  //   element: "Fire",
-  //   trait: ["Provoke", "Barrier", "Dual Attack"]
-  // },
-  // {
-  //   name: "Haste",
-  //   star: 5,
-  //   role: "Thief",
-  //   element: "Fire",
-  //   trait: ["Decrease Defense", "Unhealable", "Vampiric Touch", "Bleed"]
-  // },
-  // {
-  //   name: "Ken",
-  //   star: 5,
-  //   role: "Warrior",
-  //   element: "Fire",
-  //   trait: ["Decrease Defense", "vigor", "Burn", "Increase Speed", "Decrease Attack", "Stun"]
-  // },
-  // {
-  //   name: "Cermia",
-  //   star: 5,
-  //   role: "Warrior",
-  //   element: "Fire",
-  //   trait: ["Unhealable", "Increase Attack (Greater)", "Penetrate"]
-  // },
+  {
+    name: "Haste",
+    star: 5,
+    role: "Thief",
+    element: "Fire",
+    imprint: {
+      "release": "Health",
+      "concentration": "Effectiveness",
+    },
+    skills: {
+      skill_1: {
+        number: 1,
+        type: "",
+        name: "Envoy's Scythe",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Decrease Defense"],
+      },
+      skill_2: {
+        number: 2,
+        type: "",
+        name: "Blood Rend",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Unhealable", "Vampiric Touch"],
+      },
+      skill_3: {
+        number: 3,
+        type: "",
+        name: "Vampiric Seal",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Bleed", "Decrease Defense"],
+      },
+    },
+  },
+
+  {
+    name: "Ken",
+    star: 5,
+    role: "Warrior",
+    element: "Fire",
+    imprint: {
+      "release": "Health",
+      "concentration": "Health",
+    },
+    skills: {
+      skill_1: {
+        number: 1,
+        type: "",
+        name: "Knockout",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Decrease Defense", "vigor", "Burn"],
+      },
+      skill_2: {
+        number: 2,
+        type: "",
+        name: "Celestial Kick",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Increase Speed", "Vigor"],
+      },
+      skill_3: {
+        number: 3,
+        type: "",
+        name: "Phoenix Flurry",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Decrease Attack", "Stun", "Vigor"],
+      },
+    },
+  },
+
+  {
+    name: "Cermia",
+    star: 5,
+    role: "Warrior",
+    element: "Fire",
+    imprint: {
+      "release": "Critical Hit Chance",
+      "concentration": "Attack",
+    },
+    skills: {
+      skill_1: {
+        number: 1,
+        type: "",
+        name: "Playing with Fire!",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Unhealable"],
+      },
+      skill_2: {
+        number: 2,
+        type: "",
+        name: "Hot Streak!",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Increase Attack (Greater)", "Extra Turn"],
+      },
+      skill_3: {
+        number: 3,
+        type: "",
+        name: "All-In!",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Penetrate"],
+      },
+    },
+  },
+
+  {
+    name: "Sol",
+    star: 5,
+    role: "Warrior",
+    element: "Fire",
+    imprint: {
+      "release": "Defense",
+      "concentration": "Attack",
+    },
+    skills: {
+      skill_1: {
+        number: 1,
+        type: "",
+        name: "Gunflame",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Extra Turn"],
+      },
+      skill_2: {
+        number: 2,
+        type: "",
+        name: "Volcanic Viper",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Silence"],
+      },
+      skill_3: {
+        number: 3,
+        type: "",
+        name: "Tyrant Rave ver.Beta",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Cannot Buff"],
+      },
+    },
+  },
+
   // {
   //   name: "Sol",
   //   star: 5,

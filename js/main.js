@@ -199,6 +199,7 @@ $(document).ready(function (){
             });
     
             const $name = $('<div>', { class: 'name' });
+            $name.append(`<img src="/images/icons/${character.role.replace(/\s+/g, '_').toLowerCase()}.png">`);
             $name.append(`<img src="/images/icons/${character.element.toLowerCase()}.png">`);
             $name.append(character.name);
     
