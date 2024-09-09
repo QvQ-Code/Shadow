@@ -97,14 +97,16 @@ header {
 }
 @media(max-width: 892px){
     .main-wrapper .left-main {
-        width: 100%;
+        width: 70%;
+        height: 100vh;
         position: fixed;
         background-color: var(--primary-color);
         z-index: 2;
         top: 0;
         right: 0;
-        left: 0;
-        padding: 80px 20px 20px 20px;
+        margin-right: 0;
+        padding: 75px 10px 20px 15px;
+        overflow-y: auto;
     }
 }
 
@@ -123,8 +125,6 @@ header {
         margin: 0;
     }
 }
-
-
 
 .main-wrapper .right-main .detail {
     background-color: #111;
@@ -207,7 +207,10 @@ header {
 }
 @media(max-width: 892px){
     .container {
+        margin-left: 5px;
+        margin-right: 5px;
         margin-bottom: 10px;
+        padding: 10px;
     }
 }
 
