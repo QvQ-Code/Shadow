@@ -96,13 +96,13 @@ header {
         height: 101vh;
         position: fixed;
         background-color: var(--primary-color);
-        z-index: 2;
+        z-index: 4;
         top: 0;
         right: -70%;
         margin-right: 0;
         padding: 75px 10px 70px 15px;
         overflow-y: auto;
-        transition: all .2s ease-in;
+        transition: all .1s ease-in;
     }
     .main-wrapper .side-active {
         right: 0 !important;
@@ -129,7 +129,7 @@ header {
         background-color: #FF5E7D;
         bottom: 60px;
         right: calc(35% - 50px);
-        z-index: 3;
+        z-index: 5;
         box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
         border: 2px solid white;
     }
