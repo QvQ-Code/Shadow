@@ -102,7 +102,9 @@ header {
         background-color: var(--primary-color);
         z-index: 2;
         top: 0;
-        right: -110%;
+        right: 0;
+        left: 0;
+        padding: 80px 20px 20px 20px;
     }
 }
 
@@ -166,6 +168,7 @@ header {
         flex-shrink: 0;
         border-radius: .25rem;
         overflow: hidden;
+        cursor: pointer;
         box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     }
     .main-wrapper .right-main .search .filter span:nth-child(1) {
@@ -201,6 +204,11 @@ header {
     transition: all .2s ease-in-out;
     position: relative;
     z-index: 2;
+}
+@media(max-width: 892px){
+    .container {
+        margin-bottom: 10px;
+    }
 }
 
 .container:last-child {
