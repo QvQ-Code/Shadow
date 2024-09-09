@@ -482,4 +482,5 @@ footer {
     display: flex;
     align-items: flex-start;
     padding: 0 10%;
+    margin-bottom: 30px;
 }
