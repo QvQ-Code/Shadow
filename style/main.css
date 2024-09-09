@@ -154,6 +154,42 @@ header {
     color: white;
 }
 
+.main-wrapper .right-main .search .filter {
+    display: none;
+}
+@media(max-width: 892px){
+    .main-wrapper .right-main .search .filter {
+        display: flex;
+        background-color: white;
+        margin-left: 10px;
+        width: 100px;
+        flex-shrink: 0;
+        border-radius: .25rem;
+        overflow: hidden;
+        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    }
+    .main-wrapper .right-main .search .filter span:nth-child(1) {
+        background-color: #00BDB1;
+        color: white;
+        display: flex;
+        height: 40px;
+        flex-shrink: 0;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: bold;
+        flex-grow: 1;
+    }
+    .main-wrapper .right-main .search .filter span:nth-child(2) {
+        width: 40px;
+        height: 40px;
+        flex-grow: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
 .container {
     display: flex;
     flex-wrap: wrap;
