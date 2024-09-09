@@ -351,6 +351,9 @@ $(document).ready(function (){
     
         if (searchValue.length <= 0) {
             $(this).removeClass("active");
+            // Show all elements when the input is empty
+            $('.char-box').show();
+            return; // Exit the function since we don't need to filter anymore
         }
     
         // Split the input by commas and remove any empty strings
@@ -375,6 +378,6 @@ $(document).ready(function (){
         });
     });
         
-    
+
 });
 
