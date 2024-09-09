@@ -377,7 +377,16 @@ $(document).ready(function (){
             }
         });
     });
-        
+    
+    $(document).on('click', '.filter', function(){
+        $('.left-main').addClass("side-active");
+        $('.close-button').addClass("close-button-active");
+    });
+
+    $(document).on('click', '.close-button', function(){
+        $('.left-main').removeClass("side-active");
+        $('.close-button').removeClass("close-button-active");
+    });
 
 });
 

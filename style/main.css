@@ -98,15 +98,45 @@ header {
 @media(max-width: 892px){
     .main-wrapper .left-main {
         width: 70%;
-        height: 100vh;
+        height: 101vh;
         position: fixed;
         background-color: var(--primary-color);
         z-index: 2;
         top: 0;
-        right: 0;
+        right: -70%;
         margin-right: 0;
-        padding: 75px 10px 20px 15px;
+        padding: 75px 10px 40px 15px;
         overflow-y: auto;
+        transition: all .2s ease-in;
+    }
+    .main-wrapper .side-active {
+        right: 0 !important;
+    }
+}
+
+.close-button {
+    display: none;
+    cursor: pointer;
+}
+@media(max-width: 892px){
+    .close-button-active {
+        display: flex;
+    }
+    .close-button {
+        width: 100px;
+        height: 40px;
+        color: white;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50px;
+        position: fixed;
+        bottom: 80px;
+        background-color: #FF5E7D;
+        bottom: 95px;
+        right: calc(35% - 50px);
+        z-index: 3;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        border: 2px solid white;
     }
 }
 
@@ -447,10 +477,9 @@ header {
 
 footer {
     width: 100%;
-    height: 50px;
     background-color: var(--secondary-color);
     color: white;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     padding: 0 10%;
 }
