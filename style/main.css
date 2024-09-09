@@ -41,6 +41,12 @@ header {
     overflow: hidden;
     margin-right: 20px;
 }
+@media(max-width: 892px){
+    .header-wrapper .image {
+        width: 20px;
+        height: 20px;
+    }
+}
 
 .header-wrapper .image img {
     width: 100%;
@@ -144,7 +150,7 @@ header {
 .container .icon-box {
     width: 30px;
     height: 30px;
-    border-radius: .25rem;  
+    border-radius: .25rem;
     background-color: #222122;
     margin: 5px;
     padding: 5px;
@@ -188,14 +194,17 @@ header {
 #particles-js {
     opacity: 1 !important;
 }
+
 #particles-js canvas {
     opacity: .2;
     z-index: -1;
 }
+
 .active {
     border: 1px solid #ffffff !important;
     border-radius: 1rem !important;
 }
+
 .container .active {
     border: 1px solid #ffffff !important;
     border-radius: 1rem !important;
@@ -216,6 +225,7 @@ header {
     border-radius: 1rem !important;
     padding: 0 10px 0 5px !important;
 }
+
 .container .box-star:hover {
     border-radius: 1rem !important;
     padding: 0 10px 0 10px !important;
@@ -229,7 +239,7 @@ header {
 .container .icon img {
     width: 100%;
     height: 100%;
-    display: block;    
+    display: block;
 }
 
 .character {
@@ -239,7 +249,7 @@ header {
 }
 
 .character .char-box {
-    cursor:zoom-in;
+    cursor: zoom-in;
     width: 150px;
     min-height: 210px;
     overflow: hidden;
@@ -261,11 +271,11 @@ header {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: rgb(255,255,255);
-    background: -moz-radial-gradient(circle, rgba(255,255,255,0.10407913165266103) 0%, rgba(255,255,255,0.06206232492997199) 51%, rgba(255,255,255,0) 100%);
-    background: -webkit-radial-gradient(circle, rgba(255,255,255,0.10407913165266103) 0%, rgba(255,255,255,0.06206232492997199) 51%, rgba(255,255,255,0) 100%);
-    background: radial-gradient(circle, rgba(255,255,255,0.10407913165266103) 0%, rgba(255,255,255,0.06206232492997199) 51%, rgba(255,255,255,0) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ffffff",GradientType=1);
+    background: rgb(255, 255, 255);
+    background: -moz-radial-gradient(circle, rgba(255, 255, 255, 0.10407913165266103) 0%, rgba(255, 255, 255, 0.06206232492997199) 51%, rgba(255, 255, 255, 0) 100%);
+    background: -webkit-radial-gradient(circle, rgba(255, 255, 255, 0.10407913165266103) 0%, rgba(255, 255, 255, 0.06206232492997199) 51%, rgba(255, 255, 255, 0) 100%);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.10407913165266103) 0%, rgba(255, 255, 255, 0.06206232492997199) 51%, rgba(255, 255, 255, 0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff", endColorstr="#ffffff", GradientType=1);
 }
 
 .character .char-box .skills .skill {
@@ -317,7 +327,7 @@ header {
 .character .char-box .name img {
     display: block;
     width: 16px;
-    height: 16px; 
+    height: 16px;
     margin-right: 5px;
 }
 
