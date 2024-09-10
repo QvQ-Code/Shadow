@@ -89,8 +89,6 @@ header {
     width: 32%;
     margin-right: 20px;
     height: max-content;
-    position: sticky;
-    top: 0;
 }
 @media(max-width: 892px){
     .main-wrapper .left-main {
@@ -285,9 +283,9 @@ header {
 .container .box-element .icon,
 .container .box-classes .icon,
 .container .box-star .icon {
-    margin-right: 10px;
-    width: 20px;
-    height: 20px;
+    margin-right: 6px;
+    width: 15px;
+    height: 15px;
 }
 
 .container .box-star .icon {
@@ -368,6 +366,7 @@ header {
     position: relative;
     background-color: #2A313D;
     display: flex;
+    flex-grow: 0;
     flex-direction: column;
     justify-content: flex-start;
     margin: 10px;
@@ -483,4 +482,22 @@ footer {
     align-items: flex-start;
     padding: 0 10%;
     margin-bottom: 30px;
+}
+
+/* Laptop */
+@media (max-width: 1366px){
+    .main-wrapper .left-main {
+        margin-right: 0;
+    }
+    .container {
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+    .container .icon-box {
+        margin: 3px;
+    }
+    .character .char-box {
+        width: 22%;
+        flex-grow: 1 !important;
+    }
 }
