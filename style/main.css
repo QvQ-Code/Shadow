@@ -375,7 +375,7 @@ header {
 }
 @media(max-width: 892px){
     .character .char-box {
-        width: 47%;
+        width: 47% !important;
         margin: 0 0 20px 0;
     }
 }
