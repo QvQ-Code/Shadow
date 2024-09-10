@@ -377,6 +377,7 @@ header {
     .character .char-box {
         width: 47% !important;
         margin: 0 0 20px 0;
+        flex-grow: 0 !important;
     }
 }
 
