@@ -182,20 +182,30 @@ $(document).ready(function () {
                 if (Array.isArray(skill.trait) && skill.trait.length > 0) {
                     $.each(skill.trait, function (index, trait) {
                         if (trait) {
-                            // var type = "Buff";
-                            $traits.append(`<div class="trait"><img src="/images/icons/${trait.replace(/\s+/g, '_')}.png"><span class="inner"><span>${trait}</span><span class="info-hover">Description</span></span></div>`);
-                            // if(type == "Special"){
-                            //     $traits.append(`<div class="trait trait-special"><img src="/images/icons/${trait.replace(/\s+/g, '_')}.png"><span class="inner"><span>${trait}</span><span class="info-hover">Description</span></span></div>`);
-                            // }
-                            // if(type == "Buff"){
-                            //     $traits.append(`<div class="trait trait-buff"><span class="inner"><img src="/images/icons/${trait.replace(/\s+/g, '_')}.png"><span>${trait}</span></span><span class="info-hover">Description</span></div>`);
-                            // }
-                            // if(type == "Debuff"){
-                            //     $traits.append(`<div class="trait trait-debuff"><span class="inner"><img src="/images/icons/${trait.replace(/\s+/g, '_')}.png"><span>${trait}</span></span><span class="info-hover">Description</span></div>`);
-                            // }
+                            let foundTrait;
+                            let type = "";
+                
+                            // Search for the trait in buffs
+                            foundTrait = buffs.find(buff => buff.name === trait) || debuffs.find(debuff => debuff.name === trait);
+                
+                            if (foundTrait) {
+                                type = foundTrait.type; // Buff, Debuff, or Special
+                
+                                // Build the trait display based on the type and include the effect
+                                let effect = foundTrait.effect || "No effect";
+                                
+                                if (type === "Buff") {
+                                    $traits.append(`<div class="trait trait-buff"><span class="inner"><img src="/images/icons/${trait.replace(/\s+/g, '_')}.png"><span>${trait}</span></span><span class="info-hover">${effect}</span></div>`);
+                                } else if (type === "Debuff") {
+                                    $traits.append(`<div class="trait trait-debuff"><span class="inner"><img src="/images/icons/${trait.replace(/\s+/g, '_')}.png"><span>${trait}</span></span><span class="info-hover">${effect}</span></div>`);
+                                } else if (type === "Special") {
+                                    $traits.append(`<div class="trait trait-special"><span class="inner"><span>${trait}</span></span><span class="info-hover">${effect}</span></div>`);
+                                }
+                            }
                         }
                     });
                 }
+                
                 $skillBox.append($traits);
                 $skills.append($skillBox);
             });

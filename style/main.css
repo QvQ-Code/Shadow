@@ -404,6 +404,7 @@ header {
 
 .character .char-box .trait {
     display: flex;
+    flex-direction: column;
     font-size: 11px;
     color: black;
     margin: 0 0 2px 0;
@@ -425,12 +426,13 @@ header {
     overflow: hidden;
     max-height: 0;
     transition: all .3s ease;
-    margin-top: 3px;;
+    margin-top: 3px;
 }
 
 .character .char-box .trait:hover .info-hover {
     display: block;
     max-height: 100px;
+    margin-top: 6px;
 }
 
 .character .char-box .trait img {
@@ -496,9 +498,9 @@ footer {
 
 /* Trait */
 .trait-special {
-    background-color: rgb(105, 75, 0);
+    background-color: #37241D;
     display: block;
-    padding: 3px 5px !important;
+    padding: 4px 8px !important;
     border-radius: .25rem;
     color: white !important;
     font-weight: bold !important;
@@ -509,19 +511,19 @@ footer {
 }
 
 .trait-buff {
-    background-color: #054f6fd4;
+    background-color: #1F4468;
     display: flex !important;
     flex-direction: column !important;
-    padding: 3px 5px !important;
+    padding: 4px 8px !important;
     border-radius: .25rem;
     color: white !important;
     font-weight: bold !important;
 }
 
 .trait-debuff {
-    background-color: #cd2127c7;
+    background-color: #701F1E;
     display: block;
-    padding: 3px 5px !important;
+    padding: 4px 8px !important;
     border-radius: .25rem;
     color: white !important;
     font-weight: bold;

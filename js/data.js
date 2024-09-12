@@ -163,7 +163,7 @@ const buffs = [
   },
   { name: "Penetrate",
     effect: "",
-    type: "Buff",
+    type: "Special",
   },
   { name: "Extra Turn",
     effect: "",
