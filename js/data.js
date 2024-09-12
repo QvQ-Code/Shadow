@@ -27,82 +27,288 @@ const element = [
 ];
 
 const buffs = [
-  { name: "Increase Attack" },
-  { name: "Increase Defense" },
-  { name: "Invincible" },
-  { name: "Increase Speed" },
-  { name: "Immortal" },
-  { name: "Barrier" },
-  { name: "Increase Critical Hit Resistance" },
-  { name: "Continuous Heal" },
-  { name: "Counterattack" },
-  { name: "Stealth" },
-  { name: "Reflect" },
-  { name: "Increase Critical Hit Chance" },
-  { name: "Immunity" },
-  { name: "Cleanse" },
-  { name: "Skill Nullifier" },
-  { name: "Evasion" },
-  { name: "Increase Attack (Greater)" },
-  { name: "Increase Critical Hit Damage" },
-  { name: "Guardians Blessing" },
-  { name: "Bubble" },
-  { name: "Effect Resistance" },
-  { name: "Effectiveness" },
-  { name: "Weakness Shared" },
-  { name: "Escort" },
-  { name: "Exploiting Weak Points" },
+  { name: "Increase Attack",
+    effect: "+20% atk",
+    type: "Buff",
+  },
+  { name: "Increase Defense",
+    effect: "",
+    type: "Buff",
+  },
+  { name: "Invincible",
+    effect: "",
+    type: "Buff",
+  },
+  { name: "Increase Speed",
+    effect: "",
+    type: "Buff",
+  },
+  { name: "Immortal",
+    effect: "",
+    type: "Buff",
+  },
+  { name: "Barrier",
+    effect: "",
+    type: "Buff",
+  },
+  { name: "Increase Critical Hit Resistance",
+    effect: "",
+    type: "Buff",
+  },
+  { name: "Continuous Heal",
+    effect: "",
+    type: "Buff",
+  },
+  { name: "Counterattack",
+    effect: "",
+    type: "Buff",
+  },
+  { name: "Stealth",
+    effect: "",
+    type: "Buff",
+  },
+  { name: "Reflect",
+    effect: "",
+    type: "Buff",
+  },
+  { name: "Increase Critical Hit Chance",
+    effect: "",
+    type: "Buff",
+  },
+  { name: "Immunity",
+    effect: "",
+    type: "Buff",
+  },
+  { name: "Cleanse",
+    effect: "",
+    type: "Buff",
+  },
+  { name: "Skill Nullifier",
+    effect: "",
+    type: "Buff",
+  },
+  { name: "Evasion",
+    effect: "",
+    type: "Buff",
+  },
+  { name: "Increase Attack (Greater)",
+    effect: "",
+    type: "Buff",
+  },
+  { name: "Increase Critical Hit Damage",
+    effect: "",
+    type: "Buff",
+  },
+  { name: "Guardians Blessing",
+    effect: "",
+    type: "Buff",
+  },
+  { name: "Bubble",
+    effect: "",
+    type: "Buff",
+  },
+  { name: "Effect Resistance",
+    effect: "",
+    type: "Buff",
+  },
+  { name: "Effectiveness",
+    effect: "",
+    type: "Buff",
+  },
+  { name: "Weakness Shared",
+    effect: "",
+    type: "Buff",
+  },
+  { name: "Escort",
+    effect: "",
+    type: "Buff",
+  },
+  { name: "Exploiting Weak Points",
+    effect: "",
+    type: "Buff",
+  },
 
   
-  { name: "Idol" },
-  { name: "Vigor" },
-  { name: "Spirit's Blessing" },
-  { name: "Ice Cream" },
-  { name: "Indomitable" },
-  { name: "Rage" },
-  // { name: "Multilayer Barrier" },
-
-  { name: "Dual Attack" },
-  { name: "Penetrate" },
-  { name: "Extra Turn" },
-  { name: "Detonate" },
-  { name: "Random Buff" },
+  { name: "Idol",
+    effect: "",
+    type: "Buff",
+  },
+  { name: "Vigor",
+    effect: "",
+    type: "Buff",
+  },
+  { name: "Spirit's Blessing",
+    effect: "",
+    type: "Buff",
+  },
+  { name: "Ice Cream",
+    effect: "",
+    type: "Buff",
+  },
+  { name: "Indomitable",
+    effect: "",
+    type: "Buff",
+  },
+  { name: "Rage",
+    effect: "",
+    type: "Buff",
+  },
+  // { name: "Multilayer Barrier",
+    // effect: "", 
+    // type: "Buff",
+  // },
+  { name: "Dual Attack",
+    effect: "",
+    type: "Buff",
+  },
+  { name: "Penetrate",
+    effect: "",
+    type: "Buff",
+  },
+  { name: "Extra Turn",
+    effect: "",
+    type: "Buff",
+  },
+  { name: "Detonate",
+    effect: "",
+    type: "Buff",
+  },
+  { name: "Random Buff",
+    effect: "",
+    type: "Buff",
+  },
 ];
 
 const debuffs = [
-  { name: "Decrease Defense" },
-  { name: "Decrease Speed" },
-  { name: "Decrease Attack" },
-  { name: "Stun" },
-  { name: "Unhealable" },
-  { name: "Burn" },
-  { name: "Cannot Buff" },
-  { name: "Sleep" },
-  { name: "Poison" },
-  { name: "Provoke" },
-  { name: "Decrease Critical Hit Resistance" },
-  { name: "Decrease Hit Chance" },
-  { name: "Silence" },
-  { name: "Bleed" },
-  { name: "Vampiric Touch" },
-  { name: "Target" },
-  { name: "Magic Nail" },
-  { name: "Curse Boss" },
-  { name: "Bomb" },
-  { name: "Curse" },
-  { name: "Restrict" },
-  { name: "Redirected Provoke" },
-  { name: "Seal" },
-  { name: "Stigma" },
-  { name: "Venom" },
-  { name: "Beguile" },
-  { name: "Cannot Counterattack" },
-  { name: "Block" },
-  { name: "Random Debuff" },
+  { name: "Decrease Defense",
+    effect: "",
+    type: "Debuff",
+  },
+  { name: "Decrease Speed",
+    effect: "",
+    type: "Debuff",
+  },
+  { name: "Decrease Attack",
+    effect: "",
+    type: "Debuff",
+  },
+  { name: "Stun",
+    effect: "",
+    type: "Debuff",
+  },
+  { name: "Unhealable",
+    effect: "",
+    type: "Debuff",
+  },
+  { name: "Burn",
+    effect: "",
+    type: "Debuff",
+  },
+  { name: "Cannot Buff",
+    effect: "",
+    type: "Debuff",
+  },
+  { name: "Sleep",
+    effect: "",
+    type: "Debuff",
+  },
+  { name: "Poison",
+    effect: "",
+    type: "Debuff",
+  },
+  { name: "Provoke",
+    effect: "",
+    type: "Debuff",
+  },
+  { name: "Decrease Critical Hit Resistance",
+    effect: "",
+    type: "Debuff",
+  },
+  { name: "Decrease Hit Chance",
+    effect: "",
+    type: "Debuff",
+  },
+  { name: "Silence",
+    effect: "",
+    type: "Debuff",
+  },
+  { name: "Bleed",
+    effect: "",
+    type: "Debuff",
+  },
+  { name: "Vampiric Touch",
+    effect: "",
+    type: "Debuff",
+  },
+  { name: "Target",
+    effect: "",
+    type: "Debuff",
+  },
+  { name: "Magic Nail",
+    effect: "",
+    type: "Debuff",
+  },
+  { name: "Curse Boss",
+    effect: "",
+    type: "Debuff",
+  },
+  { name: "Bomb",
+    effect: "",
+    type: "Debuff",
+  },
+  { name: "Curse",
+    effect: "",
+    type: "Debuff",
+  },
+  { name: "Restrict",
+    effect: "",
+    type: "Debuff",
+  },
+  { name: "Redirected Provoke",
+    effect: "",
+    type: "Debuff",
+  },
+  { name: "Seal",
+    effect: "",
+    type: "Debuff",
+  },
+  { name: "Stigma",
+    effect: "",
+    type: "Debuff",
+  },
+  { name: "Venom",
+    effect: "",
+    type: "Debuff",
+  },
+  { name: "Beguile",
+    effect: "",
+    type: "Debuff",
+  },
+  { name: "Cannot Counterattack",
+    effect: "",
+    type: "Debuff",
+  },
+  { name: "Block",
+    effect: "",
+    type: "Debuff",
+  },
+  { name: "Random Debuff",
+    effect: "",
+    type: "Debuff",
+  },
 
-  // { name: "Soul Steal" },
-  // { name: "Injury" },
-  { name: "Extinction" },
+  // { name: "Soul Steal",
+  // effect: "",
+    // type: "Debuff",
+  // },
+  // { name: "Injury",
+  // effect: "",
+    // type: "Debuff",
+  // },
+  { name: "Extinction",
+    effect: "",
+    type: "Debuff",
+  },
 ];
 
 const special = [
@@ -110,8 +316,7 @@ const special = [
 ];
 
 const characters = [
-  {
-    name: "Ras",
+  { name: "Ras",
     star: 3,
     role: "Knight",
     element: "Fire",
@@ -162,8 +367,7 @@ const characters = [
     },
   },
 
-  {
-    name: "Ludwig",
+  { name: "Ludwig",
     star: 5,
     role: "Mage",
     element: "Earth",
@@ -214,8 +418,7 @@ const characters = [
     },
   },
 
-  {
-    name: "Krau",
+  { name: "Krau",
     star: 5,
     role: "Knight",
     element: "Ice",
@@ -266,8 +469,7 @@ const characters = [
     },
   },
 
-  {
-    name: "Yuna",
+  { name: "Yuna",
     star: 5,
     role: "Ranger",
     element: "Ice",
@@ -318,8 +520,7 @@ const characters = [
     },
   },
 
-  {
-    name: "Iseria",
+  { name: "Iseria",
     star: 5,
     role: "Ranger",
     element: "Earth",
@@ -370,8 +571,7 @@ const characters = [
     },
   },
 
-  {
-    name: "Summertime Iseria",
+  { name: "Summertime Iseria",
     star: 5,
     role: "Ranger",
     element: "Fire",
@@ -422,8 +622,7 @@ const characters = [
     },
   },
 
-  {
-    name: "Destina",
+  { name: "Destina",
     star: 5,
     role: "Soul Weaver",
     element: "Earth",
@@ -474,8 +673,7 @@ const characters = [
     },
   },
 
-  {
-    name: "Kayron",
+  { name: "Kayron",
     star: 5,
     role: "Thief",
     element: "Fire",
@@ -526,8 +724,7 @@ const characters = [
     },
   },
 
-  {
-    name: "Tenebria",
+  { name: "Tenebria",
     star: 5,
     role: "Mage",
     element: "Fire",
@@ -578,8 +775,7 @@ const characters = [
     },
   },
 
-  {
-    name: "Fairytale Tenebria",
+  { name: "Fairytale Tenebria",
     star: 5,
     role: "Mage",
     element: "Ice",
@@ -630,8 +826,7 @@ const characters = [
     },
   },
 
-  {
-    name: "Tamarinne",
+  { name: "Tamarinne",
     star: 5,
     role: "Soul Weaver",
     element: "Fire",
@@ -682,8 +877,7 @@ const characters = [
     },
   },
 
-  {
-    name: "Roana",
+  { name: "Roana",
     star: 5,
     role: "Soul Weaver",
     element: "Earth",
@@ -734,8 +928,7 @@ const characters = [
     },
   },
 
-  {
-    name: "Ravi",
+  { name: "Ravi",
     star: 5,
     role: "Warrior",
     element: "Fire",
@@ -786,8 +979,7 @@ const characters = [
     },
   },
 
-  {
-    name: "Lilias",
+  { name: "Lilias",
     star: 5,
     role: "Knight",
     element: "Fire",
@@ -838,8 +1030,7 @@ const characters = [
     },
   },
 
-  {
-    name: "Haste",
+  { name: "Haste",
     star: 5,
     role: "Thief",
     element: "Fire",
@@ -890,8 +1081,7 @@ const characters = [
     },
   },
 
-  {
-    name: "Ken",
+  { name: "Ken",
     star: 5,
     role: "Warrior",
     element: "Fire",
@@ -942,8 +1132,7 @@ const characters = [
     },
   },
 
-  {
-    name: "Cermia",
+  { name: "Cermia",
     star: 5,
     role: "Warrior",
     element: "Fire",
@@ -994,8 +1183,7 @@ const characters = [
     },
   },
 
-  {
-    name: "Sol",
+  { name: "Sol",
     star: 5,
     role: "Warrior",
     element: "Fire",
@@ -1046,8 +1234,7 @@ const characters = [
     },
   },
 
-  {
-    name: "Lilibet",
+  { name: "Lilibet",
     star: 5,
     role: "Warrior",
     element: "Earth",
@@ -1098,8 +1285,7 @@ const characters = [
     },
   },
 
-  {
-    name: "Baiken",
+  { name: "Baiken",
     star: 5,
     role: "Thief",
     element: "Earth",
@@ -1150,8 +1336,7 @@ const characters = [
     },
   },
 
-  {
-    name: "Kawerik",
+  { name: "Kawerik",
     star: 5,
     role: "Mage",
     element: "Fire",
@@ -1202,8 +1387,7 @@ const characters = [
     },
   },
 
-  {
-    name: "Diene",
+  { name: "Diene",
     star: 5,
     role: "Soul Weaver",
     element: "ice",
@@ -1254,8 +1438,7 @@ const characters = [
     },
   },
 
-  {
-    name: "Laia",
+  { name: "Laia",
     star: 5,
     role: "Warrior",
     element: "Earth",
@@ -1306,8 +1489,7 @@ const characters = [
     },
   },
 
-  {
-    name: "Luluca",
+  { name: "Luluca",
     star: 5,
     role: "Mage",
     element: "Ice",
@@ -1358,8 +1540,7 @@ const characters = [
     },
   },
 
-  {
-    name: "Zeno",
+  { name: "Zeno",
     star: 5,
     role: "Mage",
     element: "Ice",
@@ -1410,8 +1591,7 @@ const characters = [
     },
   },
 
-  {
-    name: "Ocean Breeze Luluca",
+  { name: "Ocean Breeze Luluca",
     star: 5,
     role: "Soul Weaver",
     element: "Earth",
@@ -1462,8 +1642,7 @@ const characters = [
     },
   },
 
-  {
-    name: "Straze",
+  { name: "Straze",
     star: 5,
     role: "Warrior",
     element: "Dark",
@@ -1514,8 +1693,7 @@ const characters = [
     },
   },
 
-  {
-    name: "Zio",
+  { name: "Zio",
     star: 5,
     role: "Mage",
     element: "Dark",
@@ -1566,8 +1744,7 @@ const characters = [
     },
   },
 
-  {
-    name: "Belian",
+  { name: "Belian",
     star: 5,
     role: "Knight",
     element: "Light",
@@ -1618,8 +1795,7 @@ const characters = [
     },
   },
 
-  {
-    name: "Archdemon's Shadow",
+  { name: "Archdemon's Shadow",
     star: 5,
     role: "Mage",
     element: "Dark",
@@ -1670,8 +1846,7 @@ const characters = [
     },
   },
 
-  {
-    name: "Adin",
+  { name: "Adin",
     star: 3,
     role: "Thief",
     element: "Earth",
@@ -1722,8 +1897,7 @@ const characters = [
     },
   },
 
-  {
-    name: "Taeyou",
+  { name: "Taeyou",
     star: 5,
     role: "Warrior",
     element: "Ice",
@@ -1774,8 +1948,7 @@ const characters = [
     },
   },
   
-  {
-    name: "Arunka",
+  { name: "Arunka",
     star: 5,
     role: "Warrior",
     element: "Earth",
@@ -1826,8 +1999,7 @@ const characters = [
     },
   },
 
-  {
-    name: "Ran",
+  { name: "Ran",
     star: 5,
     role: "Thief",
     element: "Ice",
@@ -1878,8 +2050,7 @@ const characters = [
     },
   },
 
-  {
-    name: "Ran",
+  { name: "Ran",
     star: 5,
     role: "Thief",
     element: "Ice",
@@ -1930,8 +2101,7 @@ const characters = [
     },
   },
 
-  {
-    name: "Vildred",
+  { name: "Vildred",
     star: 5,
     role: "Thief",
     element: "Earth",
@@ -1982,8 +2152,7 @@ const characters = [
     },
   },
 
-  {
-    name: "Vildred",
+  { name: "Vildred",
     star: 5,
     role: "Thief",
     element: "Earth",
@@ -2034,8 +2203,7 @@ const characters = [
     },
   },
 
-  {
-    name: "Aither",
+  { name: "Aither",
     star: 3,
     role: "Soul Weaver",
     element: "Ice",
@@ -2086,8 +2254,7 @@ const characters = [
     },
   },
 
-  {
-    name: "Charles",
+  { name: "Charles",
     star: 5,
     role: "Knight",
     element: "Earth",
@@ -2138,8 +2305,7 @@ const characters = [
     },
   },
 
-  {
-    name: "Alexa",
+  { name: "Alexa",
     star: 3,
     role: "Thief",
     element: "Ice",
@@ -2190,8 +2356,7 @@ const characters = [
     },
   },
 
-  {
-    name: "Bask",
+  { name: "Bask",
     star: 3,
     role: "Knight",
     element: "Ice",
@@ -2242,8 +2407,7 @@ const characters = [
     },
   },
 
-  {
-    name: "Elson",
+  { name: "Elson",
     star: 3,
     role: "Soul Weaver",
     element: "Light",
@@ -2294,8 +2458,7 @@ const characters = [
     },
   },
 
-  {
-    name: "Maya",
+  { name: "Maya",
     star: 4,
     role: "Knight",
     element: "Fire",
@@ -2346,8 +2509,7 @@ const characters = [
     },
   },
 
-  {
-    name: "Crozet",
+  { name: "Crozet",
     star: 4,
     role: "Knight",
     element: "Ice",
@@ -2398,8 +2560,7 @@ const characters = [
     },
   },
 
-  {
-    name: "Lorina",
+  { name: "Lorina",
     star: 3,
     role: "Warrior",
     element: "Dark",
@@ -2450,8 +2611,7 @@ const characters = [
     },
   },
 
-  {
-    name: "Achates",
+  { name: "Achates",
     star: 4,
     role: "Soul Weaver",
     element: "Fire",
@@ -2502,8 +2662,7 @@ const characters = [
     },
   },
 
-  {
-    name: "Angelica",
+  { name: "Angelica",
     star: 4,
     role: "Soul Weaver",
     element: "ice",
@@ -2554,8 +2713,7 @@ const characters = [
     },
   },
 
-  {
-    name: "Clarissa",
+  { name: "Clarissa",
     star: 4,
     role: "Warrior",
     element: "ice",
@@ -2606,8 +2764,7 @@ const characters = [
     },
   },
 
-  {
-    name: "Montmorancy",
+  { name: "Montmorancy",
     star: 3,
     role: "Soul Weaver",
     element: "ice",
@@ -2658,8 +2815,7 @@ const characters = [
     },
   },
 
-  {
-    name: "Corvus",
+  { name: "Corvus",
     star: 4,
     role: "Knight",
     element: "Fire",
@@ -2710,8 +2866,7 @@ const characters = [
     },
   },
 
-  {
-    name: "Enott",
+  { name: "Enott",
     star: 3,
     role: "Warrior",
     element: "Ice",
@@ -2762,8 +2917,7 @@ const characters = [
     },
   },
 
-  {
-    name: "Jane",
+  { name: "Jane",
     star: 3,
     role: "Mage",
     element: "Ice",
@@ -2814,8 +2968,7 @@ const characters = [
     },
   },
 
-  {
-    name: "Byblis",
+  { name: "Byblis",
     star: 5,
     role: "Ranger",
     element: "Ice",
@@ -2866,8 +3019,7 @@ const characters = [
     },
   },
 
-  {
-    name: "Blooming Lidica",
+  { name: "Blooming Lidica",
     star: 5,
     role: "Thief",
     element: "Earth",
@@ -2918,8 +3070,7 @@ const characters = [
     },
   },
 
-  {
-    name: "Blooming Lidica",
+  { name: "Blooming Lidica",
     star: 5,
     role: "Thief",
     element: "Earth",
@@ -2970,8 +3121,7 @@ const characters = [
     },
   },
 
-  {
-    name: "Abigail",
+  { name: "Abigail",
     star: 5,
     role: "Warrior",
     element: "Fire",
@@ -3022,8 +3172,7 @@ const characters = [
     },
   },
 
-  {
-    name: "Benimaru",
+  { name: "Benimaru",
     star: 5,
     role: "Warrior",
     element: "Fire",
@@ -3074,8 +3223,7 @@ const characters = [
     },
   },
 
-  {
-    name: "Edward Elric",
+  { name: "Edward Elric",
     star: 5,
     role: "Warrior",
     element: "Fire",
@@ -3125,928 +3273,106 @@ const characters = [
       },
     },
   },
-  // {
-  //   name: "Angelica",
-  //   star: 5,
-  //   role: "Soul Weaver",
-  //   element: "Ice",
-  //   trait: ["Stun", "Immunity", "Barrier"]
-  // },
-  // {
-  //   name: "Luluca",
-  //   star: 5,
-  //   role: "Mage",
-  //   element: "Ice",
-  //   trait: ["Decrease Defense", "Increase Defense", "Barrier"]
-  // },
-  // {
-  //   name: "Sigret",
-  //   star: 5,
-  //   role: "Warrior",
-  //   element: "Ice",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Chloe",
-  //   star: 5,
-  //   role: "Warrior",
-  //   element: "Ice",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Rem",
-  //   star: 5,
-  //   role: "Warrior",
-  //   element: "Ice",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Dizzy",
-  //   star: 5,
-  //   role: "Mage",
-  //   element: "Ice",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Politis",
-  //   star: 5,
-  //   role: "Mage",
-  //   element: "Ice",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Karin",
-  //   star: 5,
-  //   role: "Thief",
-  //   element: "Ice",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Remnant Violet",
-  //   star: 5,
-  //   role: "Thief",
-  //   element: "Ice",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Sez",
-  //   star: 5,
-  //   role: "Thief",
-  //   element: "Ice",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Landy",
-  //   star: 5,
-  //   role: "Ranger",
-  //   element: "Earth",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Charles",
-  //   star: 5,
-  //   role: "Knight",
-  //   element: "Earth",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Vildred",
-  //   star: 5,
-  //   role: "Thief",
-  //   element: "Earth",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Aramintha",
-  //   star: 5,
-  //   role: "Mage",
-  //   element: "Earth",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Violet",
-  //   star: 5,
-  //   role: "Thief",
-  //   element: "Earth",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Baiken",
-  //   star: 5,
-  //   role: "Thief",
-  //   element: "Earth",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Yufine",
-  //   star: 5,
-  //   role: "Warrior",
-  //   element: "Earth",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Lidica",
-  //   star: 5,
-  //   role: "Ranger",
-  //   element: "Earth",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Pavel",
-  //   star: 5,
-  //   role: "Ranger",
-  //   element: "Earth",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Alencia",
-  //   star: 5,
-  //   role: "Warrior",
-  //   element: "Earth",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Cerise",
-  //   star: 5,
-  //   role: "Ranger",
-  //   element: "Earth",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Arbiter Vildred",
-  //   star: 5,
-  //   role: "Thief",
-  //   element: "Dark",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Judge Kise",
-  //   star: 5,
-  //   role: "Warrior",
-  //   element: "Light",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Fallen Cecilia",
-  //   star: 5,
-  //   role: "Knight",
-  //   element: "Light",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Shooting Star Achates",
-  //   star: 5,
-  //   role: "Soul Weaver",
-  //   element: "Light",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Roana",
-  //   star: 5,
-  //   role: "Soul Weaver",
-  //   element: "Light",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Top Model Luluca",
-  //   star: 5,
-  //   role: "Mage",
-  //   element: "Light",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Last Rider Krau",
-  //   star: 5,
-  //   role: "Knight",
-  //   element: "Light",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Silver Blade Aramintha",
-  //   star: 5,
-  //   role: "Mage",
-  //   element: "Light",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Tempest Surin",
-  //   star: 5,
-  //   role: "Thief",
-  //   element: "Light",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Adventurer Ras",
-  //   star: 5,
-  //   role: "Knight",
-  //   element: "Light",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Specter Tenebria",
-  //   star: 5,
-  //   role: "Mage",
-  //   element: "Dark",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Ruele of Light",
-  //   star: 5,
-  //   role: "Soul Weaver",
-  //   element: "Light",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Martial Artist Ken",
-  //   star: 5,
-  //   role: "Warrior",
-  //   element: "Dark",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Dark Corvus",
-  //   star: 5,
-  //   role: "Warrior",
-  //   element: "Dark",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Blood Moon Haste",
-  //   star: 5,
-  //   role: "Soul Weaver",
-  //   element: "Dark",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Remnant Violet",
-  //   star: 5,
-  //   role: "Thief",
-  //   element: "Dark",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Operator Sigret",
-  //   star: 5,
-  //   role: "Ranger",
-  //   element: "Dark",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Apocalypse Ravi",
-  //   star: 5,
-  //   role: "Warrior",
-  //   element: "Dark",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Briar Witch Iseria",
-  //   star: 5,
-  //   role: "Ranger",
-  //   element: "Dark",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Maid Chloe",
-  //   star: 5,
-  //   role: "Soul Weaver",
-  //   element: "Dark",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Luna",
-  //   star: 5,
-  //   role: "Warrior",
-  //   element: "Ice",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Basar",
-  //   star: 5,
-  //   role: "Mage",
-  //   element: "Earth",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Flan",
-  //   star: 5,
-  //   role: "Ranger",
-  //   element: "Ice",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Melissa",
-  //   star: 5,
-  //   role: "Mage",
-  //   element: "Fire",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Taranor Guard",
-  //   star: 5,
-  //   role: "Knight",
-  //   element: "Ice",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Destina",
-  //   star: 5,
-  //   role: "Soul Weaver",
-  //   element: "Earth",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Landy",
-  //   star: 5,
-  //   role: "Ranger",
-  //   element: "Earth",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Zeno",
-  //   star: 5,
-  //   role: "Mage",
-  //   element: "Ice",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Hurado",
-  //   star: 5,
-  //   role: "Mage",
-  //   element: "Dark",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Clarissa",
-  //   star: 5,
-  //   role: "Warrior",
-  //   element: "Ice",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Alexa",
-  //   star: 5,
-  //   role: "Thief",
-  //   element: "Ice",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Arowell",
-  //   star: 5,
-  //   role: "Knight",
-  //   element: "Light",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Assassin Cartuja",
-  //   star: 5,
-  //   role: "Warrior",
-  //   element: "Dark",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Assassin Cidd",
-  //   star: 5,
-  //   role: "Thief",
-  //   element: "Dark",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Auxiliary Lots",
-  //   star: 5,
-  //   role: "Soul Weaver",
-  //   element: "Dark",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Bellona",
-  //   star: 5,
-  //   role: "Ranger",
-  //   element: "Earth",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Cidd",
-  //   star: 5,
-  //   role: "Thief",
-  //   element: "Earth",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Doris",
-  //   star: 5,
-  //   role: "Soul Weaver",
-  //   element: "Light",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Elena",
-  //   star: 5,
-  //   role: "Soul Weaver",
-  //   element: "Ice",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "General Purrgis",
-  //   star: 5,
-  //   role: "Warrior",
-  //   element: "Light",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Kise",
-  //   star: 5,
-  //   role: "Thief",
-  //   element: "Ice",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Mascot Hazel",
-  //   star: 5,
-  //   role: "Soul Weaver",
-  //   element: "Fire",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Pearlhorizon",
-  //   star: 5,
-  //   role: "Mage",
-  //   element: "Earth",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Ray",
-  //   star: 5,
-  //   role: "Soul Weaver",
-  //   element: "Earth",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Surin",
-  //   star: 5,
-  //   role: "Thief",
-  //   element: "Fire",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Taranor Royal Guard",
-  //   star: 5,
-  //   role: "Knight",
-  //   element: "Ice",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Vildred",
-  //   star: 5,
-  //   role: "Thief",
-  //   element: "Earth",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Khawazu",
-  //   star: 5,
-  //   role: "Warrior",
-  //   element: "Fire",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Elena",
-  //   star: 5,
-  //   role: "Soul Weaver",
-  //   element: "Ice",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Tywin",
-  //   star: 5,
-  //   role: "Knight",
-  //   element: "Ice",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Aither",
-  //   star: 5,
-  //   role: "Soul Weaver",
-  //   element: "Ice",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Clarissa",
-  //   star: 5,
-  //   role: "Warrior",
-  //   element: "Ice",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Auxiliary Lots",
-  //   star: 5,
-  //   role: "Soul Weaver",
-  //   element: "Dark",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Corvus",
-  //   star: 5,
-  //   role: "Warrior",
-  //   element: "Fire",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Assassin Coli",
-  //   star: 5,
-  //   role: "Thief",
-  //   element: "Dark",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Gunther",
-  //   star: 5,
-  //   role: "Warrior",
-  //   element: "Light",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Serila",
-  //   star: 5,
-  //   role: "Mage",
-  //   element: "Fire",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Achates",
-  //   star: 5,
-  //   role: "Soul Weaver",
-  //   element: "Fire",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Dingo",
-  //   star: 5,
-  //   role: "Warrior",
-  //   element: "Fire",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Guider Aither",
-  //   star: 5,
-  //   role: "Mage",
-  //   element: "Light",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Camilla",
-  //   star: 5,
-  //   role: "Soul Weaver",
-  //   element: "Ice",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Elphelt",
-  //   star: 5,
-  //   role: "Ranger",
-  //   element: "Fire",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Fairytale Tenebria",
-  //   star: 5,
-  //   role: "Mage",
-  //   element: "Ice",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Adlay",
-  //   star: 5,
-  //   role: "Mage",
-  //   element: "Earth",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Ambitious Tywin",
-  //   star: 5,
-  //   role: "Knight",
-  //   element: "Light",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Armin",
-  //   star: 5,
-  //   role: "Knight",
-  //   element: "Earth",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Blaze Dingo",
-  //   star: 5,
-  //   role: "Soul Weaver",
-  //   element: "Fire",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Chaos Inquisitor",
-  //   star: 5,
-  //   role: "Knight",
-  //   element: "Fire",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Crescent Moon Rin",
-  //   star: 5,
-  //   role: "Thief",
-  //   element: "Dark",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Desert Jewel Basar",
-  //   star: 5,
-  //   role: "Soul Weaver",
-  //   element: "Light",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Doll Maker Pearl",
-  //   star: 5,
-  //   role: "Mage",
-  //   element: "Fire",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Ervalen",
-  //   star: 5,
-  //   role: "Warrior",
-  //   element: "Earth",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Fighter Maya",
-  //   star: 5,
-  //   role: "Knight",
-  //   element: "Earth",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Frostfire Dingo",
-  //   star: 5,
-  //   role: "Warrior",
-  //   element: "Fire",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Hwayoung",
-  //   star: 5,
-  //   role: "Thief",
-  //   element: "Fire",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Julian",
-  //   star: 5,
-  //   role: "Mage",
-  //   element: "Ice",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Krazy",
-  //   star: 5,
-  //   role: "Warrior",
-  //   element: "Dark",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Lionheart Cermia",
-  //   star: 5,
-  //   role: "Warrior",
-  //   element: "Fire",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Lotus",
-  //   star: 5,
-  //   role: "Soul Weaver",
-  //   element: "Light",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Nightmare Cid",
-  //   star: 5,
-  //   role: "Thief",
-  //   element: "Dark",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Sylvan Sage",
-  //   star: 5,
-  //   role: "Mage",
-  //   element: "Light",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Sylvan Sage",
-  //   star: 5,
-  //   role: "Mage",
-  //   element: "Light",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Taranor Royal Guard",
-  //   star: 5,
-  //   role: "Knight",
-  //   element: "Ice",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Wanderer Silk",
-  //   star: 5,
-  //   role: "Soul Weaver",
-  //   element: "Dark",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Wanderer Silk",
-  //   star: 5,
-  //   role: "Soul Weaver",
-  //   element: "Dark",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Watcher Schuri",
-  //   star: 5,
-  //   role: "Ranger",
-  //   element: "Light",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Adel",
-  //   star: 5,
-  //   role: "Warrior",
-  //   element: "Dark",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Angel of Light",
-  //   star: 5,
-  //   role: "Soul Weaver",
-  //   element: "Light",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Black Cat",
-  //   star: 5,
-  //   role: "Thief",
-  //   element: "Dark",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Flurry",
-  //   star: 5,
-  //   role: "Ranger",
-  //   element: "Ice",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Joon",
-  //   star: 5,
-  //   role: "Mage",
-  //   element: "Fire",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Krun",
-  //   star: 5,
-  //   role: "Warrior",
-  //   element: "Fire",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Luna",
-  //   star: 5,
-  //   role: "Soul Weaver",
-  //   element: "Dark",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Ophilia",
-  //   star: 5,
-  //   role: "Ranger",
-  //   element: "Light",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Purgis",
-  //   star: 5,
-  //   role: "Knight",
-  //   element: "Earth",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Sally",
-  //   star: 5,
-  //   role: "Mage",
-  //   element: "Ice",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Taranor",
-  //   star: 5,
-  //   role: "Knight",
-  //   element: "Dark",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Blaze Dingo",
-  //   star: 5,
-  //   role: "Warrior",
-  //   element: "Fire",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Catalina",
-  //   star: 5,
-  //   role: "Warrior",
-  //   element: "Light",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Demon King",
-  //   star: 5,
-  //   role: "Mage",
-  //   element: "Dark",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Eda",
-  //   star: 5,
-  //   role: "Ranger",
-  //   element: "Ice",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Fire Spirit",
-  //   star: 5,
-  //   role: "Soul Weaver",
-  //   element: "Fire",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Glenn",
-  //   star: 5,
-  //   role: "Ranger",
-  //   element: "Earth",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Hannah",
-  //   star: 5,
-  //   role: "Soul Weaver",
-  //   element: "Dark",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Luna",
-  //   star: 5,
-  //   role: "Mage",
-  //   element: "Ice",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Moonlight",
-  //   star: 5,
-  //   role: "Thief",
-  //   element: "Dark",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Priscilla",
-  //   star: 5,
-  //   role: "Knight",
-  //   element: "Light",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Serina",
-  //   star: 5,
-  //   role: "Ranger",
-  //   element: "Fire",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Sylvan",
-  //   star: 5,
-  //   role: "Mage",
-  //   element: "Earth",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Thea",
-  //   star: 5,
-  //   role: "Thief",
-  //   element: "Light",
-  //   trait: [""]
-  // },
-  // {
-  //   name: "Wanderer",
-  //   star: 5,
-  //   role: "Mage",
-  //   element: "Fire",
-  //   trait: [""]
-  // }
+
+  { name: "Navy Captain Landy",
+    star: 5,
+    role: "Knight",
+    element: "Light",
+    imprint: {
+      "release": "Health",
+      "concentration": "Attack",
+    },
+    skills: {
+      skill_1: {
+        number: 1,
+        type: "",
+        name: "Precicion Targeting",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Fighting Spirit"],
+      },
+      skill_2: {
+        number: 2,
+        type: "",
+        name: "Ruler of the Sea",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Stun", "Sleep", "Increase Critical Hit Resistance"],
+      },
+      skill_3: {
+        number: 3,
+        type: "",
+        name: "Mobilize the Warship!",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Increase Attack","Stun", "Penetrate"],
+      },
+    },
+  },
+
+  { name: "Conqueror Lilias",
+    star: 5,
+    role: "Warrior",
+    element: "Light",
+    imprint: {
+      "release": "Attack",
+      "concentration": "Health",
+    },
+    skills: {
+      skill_1: {
+        number: 1,
+        type: "",
+        name: "Kneel Down",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Dual Attack"],
+      },
+      skill_2: {
+        number: 2,
+        type: "",
+        name: "Cover!",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["Redirected Provoke", "Barrier"],
+      },
+      skill_3: {
+        number: 3,
+        type: "",
+        name: "",
+        soul: "",
+        cooldown: "",
+        description: "",
+        soulburn: {
+          cost: "",
+          effect: "",
+        },
+        trait: ["",""],
+      },
+    },
+  },
 ];
