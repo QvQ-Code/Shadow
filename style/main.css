@@ -507,7 +507,7 @@ footer {
 .trait-special {
     background-color: #37241D;
     display: block;
-    padding: 4px 8px !important;
+    padding: 3px 7px !important;
     border-radius: .25rem;
     color: white !important;
     font-weight: bold !important;
@@ -521,7 +521,7 @@ footer {
     background-color: #1F4468;
     display: flex !important;
     flex-direction: column !important;
-    padding: 4px 8px !important;
+    padding: 3px 7px !important;
     border-radius: .25rem;
     color: white !important;
     font-weight: bold !important;
@@ -530,14 +530,14 @@ footer {
 .trait-debuff {
     background-color: #701F1E;
     display: block;
-    padding: 4px 8px !important;
+    padding: 3px 7px !important;
     border-radius: .25rem;
     color: white !important;
     font-weight: bold;
 }
 
 .trait-special .info-hover {
-    color: rgb(255, 235, 185) !important;
+    color: #765F49 !important;
 }
 
 .trait-buff .info-hover {
@@ -546,7 +546,7 @@ footer {
 
 
 .trait-debuff .info-hover {
-    color: rgb(253, 190, 190) !important;
+    color: #E07771 !important;
 }
 
 @media (width <= 1800px){
