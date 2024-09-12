@@ -28,7 +28,7 @@ const element = [
 
 const buffs = [
   { name: "Increase Attack",
-    effect: "+20% atk",
+    effect: "Increases Attack by 50%",
     type: "Buff",
   },
   { name: "Increase Defense",

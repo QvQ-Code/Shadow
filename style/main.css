@@ -401,6 +401,7 @@ header {
 .character .char-box .skills .skill .skill-name {
     font-size: 11px;
     margin-bottom: 2px;
+    font-weight: bold;
 }
 
 .character .char-box .trait {
@@ -540,7 +541,7 @@ footer {
 }
 
 .trait-buff .info-hover {
-    color: rgb(147, 214, 255) !important;
+    color: #6da7d3 !important;
 }
 
 
