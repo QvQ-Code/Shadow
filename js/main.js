@@ -149,7 +149,7 @@ $(document).ready(function () {
             index === self.findIndex(c => c.name === character.name)
         );
 
-        $count.html("Characters: " + uniqueCharacters.length + "<span style='margin-left: 10px'>Last updated: 9 September 2024</span>");
+        $count.html("Characters: " + uniqueCharacters.length + "<span style='margin-left: 10px'>Last updated: September 2024</span>");
 
         $.each(uniqueCharacters, function (i, character) {
             // Print traits as classes for the character
