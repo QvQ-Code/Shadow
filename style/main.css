@@ -356,10 +356,9 @@ header {
 }
 
 .character .char-box {
-    cursor: zoom-in;
-    width: 170px; /* 195.5555555555 */
+    /* cursor: zoom-in; */
+    width: 400px; /* 195.5555555555 */
     min-height: 210px;
-    overflow: hidden;
     border-radius: .25rem;
     position: relative;
     background-color: #2A313D;
@@ -389,7 +388,7 @@ header {
     background-color: #e4e8f7;
     margin: 5px;
     border-radius: .25rem;
-    padding: 0 5px 2px 5px;
+    padding: 5px 8px;
     font-weight: bold;
 }
 
@@ -399,16 +398,36 @@ header {
 }
 
 .character .char-box .skills .skill .skill-name {
-    font-size: 11px;
-    margin-bottom: 2px;
+    font-size: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.character .char-box .skills .skill .skill-desc {
+    font-size: 13px;
+    display: block;
+    line-height: 1.2;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.character .char-box .skills .skill .skill-desc strong {
     font-weight: bold;
 }
 
+.character .char-box .traits {
+    display: flex;
+    flex-wrap: wrap;
+}
+.character .char-box .traits .helper-text {
+    width: 100%;
+    font-size: 10px;
+    margin-bottom: 5px;
+}
 .character .char-box .trait {
     display: flex;
     flex-direction: column;
     font-size: 11px;
     color: black;
+    height: 16px;
     margin: 0 0 2px 0;
     font-weight: 500;
     border-radius: .25rem;
@@ -422,22 +441,27 @@ header {
 }
 
 .character .char-box .trait .inner {
-    display: flex;
-    width: 100%;
-    padding-top: 2px;
-    align-items: center;
+    display: none;
+    width: max-content;
+    max-width: 160px;
     font-weight: bold;
+    position: absolute;
+    flex-direction: column;
+    z-index: 5;
+    top: -0;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    left: 20px;
+    transition: all .3s ease;
 }
 
 .character .char-box .trait .info-hover {
     overflow: hidden;
-    max-height: 0;
-    transition: all .3s ease;
     margin-top: 3px;
+    display: block;
 }
 
-.character .char-box .trait:hover .info-hover {
-    display: block;
+.character .char-box .trait:hover .inner {
+    display: flex;
     max-height: 100px;
     margin-top: 6px;
 }
@@ -504,24 +528,31 @@ footer {
 }
 
 /* Trait */
-.trait-special {
+.special-trait {
+    margin-right: 4px !important;
+}
+.trait-special,
+.special-trait {
     background-color: #37241D;
-    display: block;
-    padding: 3px 7px !important;
+    display: flex;
+    align-items: center;
+    padding: 2.5px 7px !important;
     border-radius: .25rem;
     color: white !important;
     font-weight: bold !important;
 }
-
+.trait-special {
+    left: 30px !important;
+}
 .trait-special img {
     display: none !important;
 }
 
 .trait-buff {
     background-color: #1F4468;
-    display: flex !important;
+    display: block;
     flex-direction: column !important;
-    padding: 3px 7px !important;
+    padding: 4px 7px !important;
     border-radius: .25rem;
     color: white !important;
     font-weight: bold !important;
@@ -530,23 +561,26 @@ footer {
 .trait-debuff {
     background-color: #701F1E;
     display: block;
-    padding: 3px 7px !important;
+    padding: 4px 7px !important;
     border-radius: .25rem;
     color: white !important;
     font-weight: bold;
 }
 
 .trait-special .info-hover {
-    color: #765F49 !important;
+    color: #b69474 !important;
 }
 
 .trait-buff .info-hover {
-    color: #6da7d3 !important;
+    color: #86c4f3 !important;
 }
 
+.trait-special {
+    padding: 3px 7px !important;
+}
 
 .trait-debuff .info-hover {
-    color: #E07771 !important;
+    color: #f78680 !important;
 }
 
 @media (width <= 1800px){
