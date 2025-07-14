@@ -49,7 +49,6 @@ header {
 
 .header-wrapper h1 {
     font-weight: bold;
-    font-size: 20px;
 }
 
 .main-wrapper {
@@ -112,7 +111,6 @@ header {
     background-color: #111;
     color: white;
     font-weight: bold;
-    font-size: 10px;
     padding: 10px 20px;
 }
 
@@ -169,7 +167,6 @@ header {
     text-transform: uppercase;
     align-items: center;
     justify-content: center;
-    font-size: 12px;
     font-weight: bold;
 }
 .main-wrapper .right-main .search .filter span:nth-child(2),
@@ -255,7 +252,6 @@ header {
     text-transform: capitalize;
     cursor: pointer;
     /* font-weight: bold; */
-    font-size: 12px;
     /* overflow: hidden; */
 }
 
@@ -402,17 +398,14 @@ header {
 }
 
 .character .char-box .skills .skill .skill-num {
-    font-size: 10px;
     color: #8d1717;
 }
 
 .character .char-box .skills .skill .skill-name {
-    font-size: 15px;
     margin-bottom: 5px;
     font-weight: bold;
 }
 .character .char-box .skills .skill .skill-desc {
-    font-size: 13px;
     display: block;
     line-height: 1.2;
     font-weight: 500;
@@ -435,13 +428,11 @@ header {
 }
 .character .char-box .helper-text {
     width: 100%;
-    font-size: 10px;
     margin-top: 5px;
 }
 .character .char-box .trait {
     display: flex;
     flex-direction: column;
-    font-size: 11px;
     color: black;
     height: 16px;
     margin: 0 0 2px 0;
@@ -515,7 +506,6 @@ header {
     opacity: .9;
     color: white;
     /* text-align: center; */
-    font-size: 12px;
     display: flex;
     align-items: center;
     width: 100%;
@@ -654,7 +644,7 @@ footer {
         margin: 3px;
     }
     .character .char-box .skills .skill .skill-desc {
-        font-size: 12px;
+
     }
     .container-one {
         display: block;
@@ -708,7 +698,6 @@ footer {
         width: auto;        
     }
     .main-wrapper .right-main .search .filter span:nth-child(1) {
-        font-size: 10px;
         padding: 0 15px;
     }
     .main-wrapper .right-main{
@@ -723,7 +712,7 @@ footer {
         width: 200px;
     }
     .character .char-box .skills .skill .skill-desc {
-        font-size: 11px;
+
     }
 }
 

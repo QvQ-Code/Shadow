@@ -27,129 +27,160 @@ const element = [
 ];
 
 const buffs = [
-  { name: "Increase Attack",
+  {
+    name: "Increase Attack",
     effect: "Increases Attack by 50%.",
     type: "Buff",
   },
-  { name: "Increase Defense",
+  {
+    name: "Increase Defense",
     effect: "Increases Defense by 60%.",
     type: "Buff",
   },
-  { name: "Invincible",
+  {
+    name: "Invincible",
     effect: "Nullifies all damage.",
     type: "Buff",
   },
-  { name: "Increase Speed",
+  {
+    name: "Increase Speed",
     effect: "Increases Speed by 30%.",
     type: "Buff",
   },
-  { name: "Immortal",
+  {
+    name: "Immortal",
     effect: "Cannot die for a certain number of turns.",
     type: "Buff",
   },
-  { name: "Barrier",
+  {
+    name: "Barrier",
     effect: "When suffering damage, absorbs a certain amount of damage instead of Health.",
     type: "Buff",
   },
-  { name: "Increase Critical Hit Resistance",
+  {
+    name: "Increase Critical Hit Resistance",
     effect: "Increase Critical Hit Resistance by 50%.",
     type: "Buff",
   },
-  { name: "Continuous Heal",
+  {
+    name: "Continuous Heal",
     effect: "At the start of the tur, Recovers 15% of max Health. This effect can stack.",
     type: "Buff",
   },
-  { name: "Counterattack",
+  {
+    name: "Counterattack",
     effect: "When attacked, the bearer immediately counterattacks the attacker with a basic skill. Cannot be triggered by extra attacks or counterattacks.",
     type: "Buff",
   },
-  { name: "Stealth",
+  {
+    name: "Stealth",
     effect: "When there are other allies, cannot be targeted. When suffering an attack that targets all allies, decreases damage suffered and is dispelled upon suffering damage from an attack.",
     type: "Buff",
   },
-  { name: "Increase Critical Hit Chance",
+  {
+    name: "Increase Critical Hit Chance",
     effect: "Increase Critical Hit Chance by 50%.",
     type: "Buff",
   },
-  { name: "Immunity",
+  {
+    name: "Immunity",
     effect: "Cannot be affected by any debuffs or some harmful effects.",
     type: "Buff",
   },
-  { name: "Skill Nullifier",
+  {
+    name: "Skill Nullifier",
     effect: "Nullifies damage from skills.",
     type: "Buff",
   },
-  { name: "Increase Evasion",
+  {
+    name: "Increase Evasion",
     effect: "Increases Evasion by 50%.",
     type: "Buff",
   },
-  { name: "Increase Attack (Greater)",
+  {
+    name: "Increase Attack (Greater)",
     effect: "Increases Attack by 75%.",
     type: "Buff",
   },
-  { name: "Increase Critical Hit Damage",
+  {
+    name: "Increase Critical Hit Damage",
     effect: "",
     type: "Buff",
   },
-  { name: "Guardians Blessing",
+  {
+    name: "Guardians Blessing",
     effect: "",
     type: "Buff",
   },
-  { name: "Bubble",
+  {
+    name: "Bubble",
     effect: "",
     type: "Buff",
   },
-  { name: "Effect Resistance",
+  {
+    name: "Effect Resistance",
     effect: "",
     type: "Buff",
   },
-  { name: "Effectiveness",
+  {
+    name: "Effectiveness",
     effect: "",
     type: "Buff",
   },
-  { name: "Weakness Shared",
+  {
+    name: "Weakness Shared",
     effect: "",
     type: "Buff",
   },
-  { name: "Escort",
+  {
+    name: "Escort",
     effect: "",
     type: "Buff",
   },
-  { name: "Exploiting Weak Points",
+  {
+    name: "Exploiting Weak Points",
     effect: "",
     type: "Buff",
   },
-  { name: "Vampirism",
+  {
+    name: "Vampirism",
     effect: "When attacking, absorbs 30% of damage dealt as Health.",
     type: "Buff",
   },
-  { name: "Reflect",
+  {
+    name: "Reflect",
     effect: "",
     type: "Buff",
   },
-  { name: "Cleanse",
+  {
+    name: "Cleanse",
     effect: "",
     type: "Buff",
   },
-  { name: "Deify",
+  {
+    name: "Deify",
     effect: "When attacking, increases Critical Hit Chance by 50%, and when attacked, decreases damage suffered by 50%. When more than one damage reduction effect is granted, only the strongest effect is applied. 5",
     type: "Buff",
   },
 
-  
-  { name: "Idol",
+
+  {
+    name: "Idol",
     effect: "My live show won't stop until my turn is over!",
     type: "Buff",
   },
-  { name: "Vigor",
+  {
+    name: "Vigor",
     effect: "Increases Attack and Defense by 30%.",
     type: "Buff",
   },
-  { name: "Spirit's Blessing",
+  {
+    name: "Spirit's Blessing",
     effect: "Increases Effect Resistance by 60%.",
     type: "Buff",
   },
-  { name: "Ice Cream",
+  {
+    name: "Ice Cream",
     effect: "After being attacked, recovers 20% of max Health. Dispelled after being attacked.",
     type: "Buff",
   },
@@ -158,195 +189,243 @@ const buffs = [
     effect: "Increases Critical Hit Chance and Critical Hit Damage by 15%",
     type: "Buff",
   },
-  { name: "Indomitable",
+  {
+    name: "Indomitable",
     effect: "Increases Defense and Effect Resistance by 30%.",
     type: "Buff",
   },
-  { name: "Rage",
+  {
+    name: "Rage",
     effect: "Increases Attack and Speed by 20%.",
     type: "Buff",
   },
-  { name: "Multilayer Barrier",
-    effect: "", 
-    type: "Buff",
-  },
-  { name: "Dual Attack",
-    effect: "When an ally attacks with a basic skill, if the caster is able to act, attacks the same target with a basic attack. Cannot be triggered by counterattacks.",
-    type: "Special",
-  },
-  { name: "Penetrate",
-    effect: "Ignores the target's Defense when inflicting damage.",
-    type: "Special",
-  },
-  { name: "Transfer",
-    effect: "Transfers debuffs from the caster to the target.",
-    type: "Special",
-  },
-  { name: "Extra Turn",
-    effect: "Grants an extra turn.",
-    type: "Special",
-  },
-  { name: "Detonate",
-    effect: "Instantly activates designated debuffs inflicted on the enemy. Poison, Bleed, Burn, and Venom damages are proportional to the number of turns and guantitjy. Bomb damage is una fecte by the number of turns.",
-    type: "Buff",
-  },
-  { name: "Random Buff",
+  {
+    name: "Multilayer Barrier",
     effect: "",
     type: "Buff",
   },
-  { name: "Revive",
+  {
+    name: "Dual Attack",
+    effect: "When an ally attacks with a basic skill, if the caster is able to act, attacks the same target with a basic attack. Cannot be triggered by counterattacks.",
+    type: "Special",
+  },
+  {
+    name: "Penetrate",
+    effect: "Ignores the target's Defense when inflicting damage.",
+    type: "Special",
+  },
+  {
+    name: "Transfer",
+    effect: "Transfers debuffs from the caster to the target.",
+    type: "Special",
+  },
+  {
+    name: "Extra Turn",
+    effect: "Grants an extra turn.",
+    type: "Special",
+  },
+  {
+    name: "Detonate",
+    effect: "Instantly activates designated debuffs inflicted on the enemy. Poison, Bleed, Burn, and Venom damages are proportional to the number of turns and guantitjy. Bomb damage is una fecte by the number of turns.",
+    type: "Buff",
+  },
+  {
+    name: "Random Buff",
+    effect: "",
+    type: "Buff",
+  },
+  {
+    name: "Revive",
     effect: "Upon receiving lethal damage, revives with 3% of max Health.",
     type: "Buff",
   },
-  { name: "Challenge",
+  {
+    name: "Challenge",
     effect: "After counterattacking, when the target is a Hero, deals additional damage equivalent to 8% of the target's max Health. Dispelled after the effect activates and increases Speed of the bearer for 2 turns.",
     type: "Buff",
   }
 ];
 
 const debuffs = [
-  { name: "Decrease Defense",
+  {
+    name: "Decrease Defense",
     effect: "Decreases Defense by 70%.",
     type: "Debuff",
   },
-  { name: "Decrease Speed",
+  {
+    name: "Decrease Speed",
     effect: "Decreases Speed by 30%.",
     type: "Debuff",
   },
-  { name: "Decrease Attack",
+  {
+    name: "Decrease Attack",
     effect: "Decreases Attack by 50%.",
     type: "Debuff",
   },
-  { name: "Stun",
+  {
+    name: "Stun",
     effect: "Cannot act for a certain number of turns.",
     type: "Debuff",
   },
-  { name: "Unhealable",
+  {
+    name: "Unhealable",
     effect: "Cannot receive recover Health effects.",
     type: "Debuff",
   },
-  { name: "Burn",
+  {
+    name: "Burn",
     effect: "At the start of the turn, suffers huge damage proportional to the caster's Attack.",
     type: "Debuff",
   },
-  { name: "Cannot Buff",
+  {
+    name: "Cannot Buff",
     effect: "Cannot receive any buffs.",
     type: "Debuff",
   },
-  { name: "Sleep",
+  {
+    name: "Sleep",
     effect: "Cannot act for a certain number of turns. Decreases Critical Hit Resistance and Evasion by 100%, and when suffering damage from an attack, is dispeled.",
     type: "Debuff",
   },
-  { name: "Poison",
+  {
+    name: "Poison",
     effect: "",
     type: "Debuff",
   },
-  { name: "Provoke",
+  {
+    name: "Provoke",
     effect: "At the start of the turn, forcibly uses basic skill on the target that inflicted provoke.",
     type: "Debuff",
   },
-  { name: "Decrease Critical Hit Resistance",
+  {
+    name: "Decrease Critical Hit Resistance",
     effect: "",
     type: "Debuff",
   },
-  { name: "Decrease Hit Chance",
+  {
+    name: "Decrease Hit Chance",
     effect: "Decreases Hit Chance by 50%",
     type: "Debuff",
   },
-  { name: "Silence",
+  {
+    name: "Silence",
     effect: "When selecting a skill on the bearer's turn, cannot select skills other than the basic skill.",
     type: "Debuff",
   },
-  { name: "Bleed",
+  {
+    name: "Bleed",
     effect: "At the start of the turn, suffers damage proportional to the caster's Attack.",
     type: "Debuff",
   },
-  { name: "Vampiric Touch",
+  {
+    name: "Vampiric Touch",
     effect: "When attacked, recovers 10% of the attacker's max Health.",
     type: "Debuff",
   },
-  { name: "Target",
+  {
+    name: "Target",
     effect: "",
     type: "Debuff",
   },
-  { name: "Magic Nail",
+  {
+    name: "Magic Nail",
     effect: "",
     type: "Debuff",
   },
-  { name: "Curse Boss",
+  {
+    name: "Curse Boss",
     effect: "",
     type: "Debuff",
   },
-  { name: "Bomb",
+  {
+    name: "Bomb",
     effect: "At the end of the duration, suffers damage proportional to the caster's Attack and is stunned for 1 turn. Duration cannot be extended or decreased, and stun effect ignores Effect Resistance.",
     type: "Debuff",
   },
-  { name: "Curse",
+  {
+    name: "Curse",
     effect: "When an ally except for the bearer is attacked by Single Attack, additionally inflicts a portion of the damage on the bearer. The additional damage is infliced at the end of the turn.",
     type: "Debuff",
   },
-  { name: "Restrict",
+  {
+    name: "Restrict",
     effect: "Cannot receive Combat Readiness increase effects other than that provided by the Speed stat.",
     type: "Debuff",
   },
-  { name: "Redirected Provoke",
+  {
+    name: "Redirected Provoke",
     effect: "At the start of the turn, forcibly uses basic skill on the enemy with the highest max Health.",
     type: "Debuff",
   },
-  { name: "Seal",
+  {
+    name: "Seal",
     effect: "",
     type: "Debuff",
   },
-  { name: "Stigma",
+  {
+    name: "Stigma",
     effect: "Decreases amount recovered and the effect of Combat Readiness increases by 50%.",
     type: "Debuff",
   },
-  { name: "Venom",
+  {
+    name: "Venom",
     effect: "",
     type: "Debuff",
   },
-  { name: "Frostbite",
+  {
+    name: "Frostbite",
     effect: "Cannot be subject to any damage reduction or damage sharing effects. Frostbite effect applies to Heroes only.",
     type: "Debuff",
   },
-  { name: "Beguile",
+  {
+    name: "Beguile",
     effect: "",
     type: "Debuff",
   },
-  { name: "Cannot Counterattack",
+  {
+    name: "Cannot Counterattack",
     effect: "",
     type: "Debuff",
   },
-  { name: "Block",
+  {
+    name: "Block",
     effect: "",
     type: "Debuff",
   },
-  { name: "Random Debuff",
+  {
+    name: "Random Debuff",
     effect: "Inflicting a Random Debuff",
     type: "Debuff",
   },
+  {
+    name: "Rupture",
+    effect: "When attacked, inflicts additional damage proportional to max Health. Applies to Heroes only.",
+    type: "Debuff",
+  },
+
 
   // { name: "Soul Steal",
   // effect: "",
-    // type: "Debuff",
+  // type: "Debuff",
   // },
-  { 
+];
+
+const specials = [
+  {
     name: "Injury",
     effect: "Decreases max Health cumulatively, up to a maximum of 50%. Applies to Heroes only. Unaffected by Effect Resistance or whether or not the attack hits.",
     type: "Special",
   },
-  { name: "Extinction",
+  {
+    name: "Extinction",
     effect: "Targets killed by this skill cannot revive.",
     type: "Special",
   },
 ];
 
-const special = [
-
-];
-
 const characters = [
-  { name: "Ras",
+  {
+    name: "Ras",
     star: 3,
     role: "Knight",
     element: "Fire",
@@ -397,7 +476,8 @@ const characters = [
     },
   },
 
-  { name: "Ludwig",
+  {
+    name: "Ludwig",
     star: 5,
     role: "Mage",
     element: "Earth",
@@ -448,7 +528,8 @@ const characters = [
     },
   },
 
-  { name: "Krau",
+  {
+    name: "Krau",
     star: 5,
     role: "Knight",
     element: "Ice",
@@ -499,7 +580,8 @@ const characters = [
     },
   },
 
-  { name: "Yuna",
+  {
+    name: "Yuna",
     star: 5,
     role: "Ranger",
     element: "Ice",
@@ -550,7 +632,8 @@ const characters = [
     },
   },
 
-  { name: "Iseria",
+  {
+    name: "Iseria",
     star: 5,
     role: "Ranger",
     element: "Earth",
@@ -601,7 +684,8 @@ const characters = [
     },
   },
 
-  { name: "Summertime Iseria",
+  {
+    name: "Summertime Iseria",
     star: 5,
     role: "Ranger",
     element: "Fire",
@@ -652,7 +736,8 @@ const characters = [
     },
   },
 
-  { name: "Destina",
+  {
+    name: "Destina",
     star: 5,
     role: "Soul Weaver",
     element: "Earth",
@@ -703,7 +788,8 @@ const characters = [
     },
   },
 
-  { name: "Kayron",
+  {
+    name: "Kayron",
     star: 5,
     role: "Thief",
     element: "Fire",
@@ -754,7 +840,8 @@ const characters = [
     },
   },
 
-  { name: "Tenebria",
+  {
+    name: "Tenebria",
     star: 5,
     role: "Mage",
     element: "Fire",
@@ -805,7 +892,8 @@ const characters = [
     },
   },
 
-  { name: "Fairytale Tenebria",
+  {
+    name: "Fairytale Tenebria",
     star: 5,
     role: "Mage",
     element: "Ice",
@@ -856,7 +944,8 @@ const characters = [
     },
   },
 
-  { name: "Tamarinne",
+  {
+    name: "Tamarinne",
     star: 5,
     role: "Soul Weaver",
     element: "Fire",
@@ -907,7 +996,8 @@ const characters = [
     },
   },
 
-  { name: "Roana",
+  {
+    name: "Roana",
     star: 5,
     role: "Soul Weaver",
     element: "Earth",
@@ -958,7 +1048,8 @@ const characters = [
     },
   },
 
-  { name: "Ravi",
+  {
+    name: "Ravi",
     star: 5,
     role: "Warrior",
     element: "Fire",
@@ -1009,7 +1100,8 @@ const characters = [
     },
   },
 
-  { name: "Lilias",
+  {
+    name: "Lilias",
     star: 5,
     role: "Knight",
     element: "Fire",
@@ -1060,7 +1152,8 @@ const characters = [
     },
   },
 
-  { name: "Haste",
+  {
+    name: "Haste",
     star: 5,
     role: "Thief",
     element: "Fire",
@@ -1111,7 +1204,8 @@ const characters = [
     },
   },
 
-  { name: "Ken",
+  {
+    name: "Ken",
     star: 5,
     role: "Warrior",
     element: "Fire",
@@ -1162,7 +1256,8 @@ const characters = [
     },
   },
 
-  { name: "Cermia",
+  {
+    name: "Cermia",
     star: 5,
     role: "Warrior",
     element: "Fire",
@@ -1213,7 +1308,8 @@ const characters = [
     },
   },
 
-  { name: "Sol",
+  {
+    name: "Sol",
     star: 5,
     role: "Warrior",
     element: "Fire",
@@ -1264,7 +1360,8 @@ const characters = [
     },
   },
 
-  { name: "Lilibet",
+  {
+    name: "Lilibet",
     star: 5,
     role: "Warrior",
     element: "Earth",
@@ -1315,7 +1412,8 @@ const characters = [
     },
   },
 
-  { name: "Baiken",
+  {
+    name: "Baiken",
     star: 5,
     role: "Thief",
     element: "Earth",
@@ -1366,7 +1464,8 @@ const characters = [
     },
   },
 
-  { name: "Kawerik",
+  {
+    name: "Kawerik",
     star: 5,
     role: "Mage",
     element: "Fire",
@@ -1417,7 +1516,8 @@ const characters = [
     },
   },
 
-  { name: "Diene",
+  {
+    name: "Diene",
     star: 5,
     role: "Soul Weaver",
     element: "ice",
@@ -1468,7 +1568,8 @@ const characters = [
     },
   },
 
-  { name: "Laia",
+  {
+    name: "Laia",
     star: 5,
     role: "Warrior",
     element: "Earth",
@@ -1519,7 +1620,8 @@ const characters = [
     },
   },
 
-  { name: "Luluca",
+  {
+    name: "Luluca",
     star: 5,
     role: "Mage",
     element: "Ice",
@@ -1570,7 +1672,8 @@ const characters = [
     },
   },
 
-  { name: "Zeno",
+  {
+    name: "Zeno",
     star: 5,
     role: "Mage",
     element: "Ice",
@@ -1621,7 +1724,8 @@ const characters = [
     },
   },
 
-  { name: "Ocean Breeze Luluca",
+  {
+    name: "Ocean Breeze Luluca",
     star: 5,
     role: "Soul Weaver",
     element: "Earth",
@@ -1672,7 +1776,8 @@ const characters = [
     },
   },
 
-  { name: "Straze",
+  {
+    name: "Straze",
     star: 5,
     role: "Warrior",
     element: "Dark",
@@ -1723,7 +1828,8 @@ const characters = [
     },
   },
 
-  { name: "Zio",
+  {
+    name: "Zio",
     star: 5,
     role: "Mage",
     element: "Dark",
@@ -1774,7 +1880,8 @@ const characters = [
     },
   },
 
-  { name: "Belian",
+  {
+    name: "Belian",
     star: 5,
     role: "Knight",
     element: "Light",
@@ -1825,7 +1932,8 @@ const characters = [
     },
   },
 
-  { name: "Archdemon's Shadow",
+  {
+    name: "Archdemon's Shadow",
     star: 5,
     role: "Mage",
     element: "Dark",
@@ -1876,7 +1984,8 @@ const characters = [
     },
   },
 
-  { name: "Adin",
+  {
+    name: "Adin",
     star: 3,
     role: "Thief",
     element: "Earth",
@@ -1927,7 +2036,8 @@ const characters = [
     },
   },
 
-  { name: "Taeyou",
+  {
+    name: "Taeyou",
     star: 5,
     role: "Warrior",
     element: "Ice",
@@ -1977,8 +2087,9 @@ const characters = [
       },
     },
   },
-  
-  { name: "Arunka",
+
+  {
+    name: "Arunka",
     star: 5,
     role: "Warrior",
     element: "Earth",
@@ -2029,7 +2140,8 @@ const characters = [
     },
   },
 
-  { name: "Ran",
+  {
+    name: "Ran",
     star: 5,
     role: "Thief",
     element: "Ice",
@@ -2080,7 +2192,8 @@ const characters = [
     },
   },
 
-  { name: "Vildred",
+  {
+    name: "Vildred",
     star: 5,
     role: "Thief",
     element: "Earth",
@@ -2131,7 +2244,8 @@ const characters = [
     },
   },
 
-  { name: "Aither",
+  {
+    name: "Aither",
     star: 3,
     role: "Soul Weaver",
     element: "Ice",
@@ -2182,7 +2296,8 @@ const characters = [
     },
   },
 
-  { name: "Charles",
+  {
+    name: "Charles",
     star: 5,
     role: "Knight",
     element: "Earth",
@@ -2233,7 +2348,8 @@ const characters = [
     },
   },
 
-  { name: "Alexa",
+  {
+    name: "Alexa",
     star: 3,
     role: "Thief",
     element: "Ice",
@@ -2284,7 +2400,8 @@ const characters = [
     },
   },
 
-  { name: "Bask",
+  {
+    name: "Bask",
     star: 3,
     role: "Knight",
     element: "Ice",
@@ -2335,7 +2452,8 @@ const characters = [
     },
   },
 
-  { name: "Elson",
+  {
+    name: "Elson",
     star: 3,
     role: "Soul Weaver",
     element: "Light",
@@ -2386,7 +2504,8 @@ const characters = [
     },
   },
 
-  { name: "Maya",
+  {
+    name: "Maya",
     star: 4,
     role: "Knight",
     element: "Fire",
@@ -2437,7 +2556,8 @@ const characters = [
     },
   },
 
-  { name: "Crozet",
+  {
+    name: "Crozet",
     star: 4,
     role: "Knight",
     element: "Ice",
@@ -2488,7 +2608,8 @@ const characters = [
     },
   },
 
-  { name: "Lorina",
+  {
+    name: "Lorina",
     star: 3,
     role: "Warrior",
     element: "Dark",
@@ -2539,7 +2660,8 @@ const characters = [
     },
   },
 
-  { name: "Achates",
+  {
+    name: "Achates",
     star: 4,
     role: "Soul Weaver",
     element: "Fire",
@@ -2590,7 +2712,8 @@ const characters = [
     },
   },
 
-  { name: "Angelica",
+  {
+    name: "Angelica",
     star: 4,
     role: "Soul Weaver",
     element: "ice",
@@ -2641,7 +2764,8 @@ const characters = [
     },
   },
 
-  { name: "Clarissa",
+  {
+    name: "Clarissa",
     star: 4,
     role: "Warrior",
     element: "ice",
@@ -2692,7 +2816,8 @@ const characters = [
     },
   },
 
-  { name: "Montmorancy",
+  {
+    name: "Montmorancy",
     star: 3,
     role: "Soul Weaver",
     element: "ice",
@@ -2743,7 +2868,8 @@ const characters = [
     },
   },
 
-  { name: "Corvus",
+  {
+    name: "Corvus",
     star: 4,
     role: "Knight",
     element: "Fire",
@@ -2794,7 +2920,8 @@ const characters = [
     },
   },
 
-  { name: "Enott",
+  {
+    name: "Enott",
     star: 3,
     role: "Warrior",
     element: "Ice",
@@ -2845,7 +2972,8 @@ const characters = [
     },
   },
 
-  { name: "Jena",
+  {
+    name: "Jena",
     star: 3,
     role: "Mage",
     element: "Ice",
@@ -2896,7 +3024,8 @@ const characters = [
     },
   },
 
-  { name: "Byblis",
+  {
+    name: "Byblis",
     star: 5,
     role: "Ranger",
     element: "Ice",
@@ -2947,7 +3076,8 @@ const characters = [
     },
   },
 
-  { name: "Blooming Lidica",
+  {
+    name: "Blooming Lidica",
     star: 5,
     role: "Thief",
     element: "Earth",
@@ -2998,7 +3128,8 @@ const characters = [
     },
   },
 
-  { name: "Abigail",
+  {
+    name: "Abigail",
     star: 5,
     role: "Warrior",
     element: "Fire",
@@ -3049,7 +3180,8 @@ const characters = [
     },
   },
 
-  { name: "Benimaru",
+  {
+    name: "Benimaru",
     star: 5,
     role: "Warrior",
     element: "Fire",
@@ -3095,12 +3227,13 @@ const characters = [
           cost: "",
           effect: "",
         },
-        trait: ["Decrease Defense","Multilayer Barrier"],
+        trait: ["Decrease Defense", "Multilayer Barrier"],
       },
     },
   },
 
-  { name: "Edward Elric",
+  {
+    name: "Edward Elric",
     star: 5,
     role: "Warrior",
     element: "Fire",
@@ -3151,7 +3284,8 @@ const characters = [
     },
   },
 
-  { name: "Navy Captain Landy",
+  {
+    name: "Navy Captain Landy",
     star: 5,
     role: "Knight",
     element: "Light",
@@ -3197,12 +3331,13 @@ const characters = [
           cost: "",
           effect: "",
         },
-        trait: ["Increase Attack","Stun", "Penetrate"],
+        trait: ["Increase Attack", "Stun", "Penetrate"],
       },
     },
   },
 
-  { name: "Conqueror Lilias",
+  {
+    name: "Conqueror Lilias",
     star: 5,
     role: "Warrior",
     element: "Light",
@@ -3253,7 +3388,8 @@ const characters = [
     },
   },
 
-  { name: "Harsetti",
+  {
+    name: "Harsetti",
     star: 5,
     role: "Mage",
     element: "Dark",
@@ -3304,7 +3440,8 @@ const characters = [
     },
   },
 
-  { name: "Hazel",
+  {
+    name: "Hazel",
     star: 3,
     role: "Soul Weaver",
     element: "Fire",
@@ -3355,7 +3492,8 @@ const characters = [
     },
   },
 
-  { name: "Lucy",
+  {
+    name: "Lucy",
     star: 3,
     role: "Soul Weaver",
     element: "Earth",
@@ -3406,7 +3544,8 @@ const characters = [
     },
   },
 
-  { name: "Karin",
+  {
+    name: "Karin",
     star: 4,
     role: "Thief",
     element: "Ice",
@@ -3457,7 +3596,8 @@ const characters = [
     },
   },
 
-  { name: "Azalea",
+  {
+    name: "Azalea",
     star: 3,
     role: "Warrior",
     element: "Fire",
@@ -3508,7 +3648,8 @@ const characters = [
     },
   },
 
-  { name: "Closer Charles",
+  {
+    name: "Closer Charles",
     star: 5,
     role: "Thief",
     element: "Dark",
@@ -3559,7 +3700,8 @@ const characters = [
     },
   },
 
-  { name: "Fenris",
+  {
+    name: "Fenris",
     star: 5,
     role: "Ranger",
     element: "Earth",
@@ -3609,8 +3751,9 @@ const characters = [
       },
     },
   },
-  
-  { name: "Remnant Violet",
+
+  {
+    name: "Remnant Violet",
     star: 5,
     role: "Thief",
     element: "Dark",
@@ -3661,7 +3804,8 @@ const characters = [
     },
   },
 
-  { name: "Holiday Yufine",
+  {
+    name: "Holiday Yufine",
     star: 5,
     role: "Warrior",
     element: "Fire",
@@ -3712,7 +3856,8 @@ const characters = [
     },
   },
 
-  { name: "Hellion Lua",
+  {
+    name: "Hellion Lua",
     star: 5,
     role: "Ranger",
     element: "Dark",
@@ -3763,7 +3908,8 @@ const characters = [
     },
   },
 
-  { name: "Afternoon Soak Flan",
+  {
+    name: "Afternoon Soak Flan",
     star: 5,
     role: "Ranger",
     element: "Fire",
@@ -3814,7 +3960,8 @@ const characters = [
     },
   },
 
-  { name: "Flan",
+  {
+    name: "Flan",
     star: 5,
     role: "Ranger",
     element: "Ice",
@@ -3865,7 +4012,8 @@ const characters = [
     },
   },
 
-  { name: "Pirate Captain Flan",
+  {
+    name: "Pirate Captain Flan",
     star: 5,
     role: "Ranger",
     element: "Dark",
@@ -3914,5 +4062,56 @@ const characters = [
         trait: ["Increase Attack", "Burn", "Bomb"],
       },
     },
+  },
+  {
+    name: "Witch of the Mere Tenebria",
+    star: 5,
+    role: "Mage",
+    element: "Light",
+    imprint: {
+      "release": "Health",
+      "concentration": "Health"
+    },
+    skills: {
+      skill_1: {
+        number: 1,
+        type: "Active",
+        name: "Mirror Fragment",
+        soul: "+1",
+        cooldown: "",
+        description: "Attacks the enemy with a mirror, with a 100% chance to inflict a random debuff (Poison, Decrease Speed, or Decrease Defense) for 1 turn. When Mirror of the Abyss is on cooldown, triggers a Dual Attack from the ally with the highest Attack. Grants an extra turn.",
+        soulburn: {
+          cost: "",
+          effect: ""
+        },
+        trait: ["Random Debuff", "Extra Turn", "Dual Attack"]
+      },
+      skill_2: {
+        number: 2,
+        type: "Active",
+        name: "Consuming Grasp",
+        soul: "+2",
+        cooldown: "3 turns",
+        description: "After inflicting Rupture on all enemies for 2 turns, attacks all enemies and has a 75% chance to inflict Restrict for 2 turns. Grants stealth and a barrier (proportional to Level) to the caster for 2 turns.",
+        soulburn: {
+          cost: "",
+          effect: ""
+        },
+        trait: ["Rupture", "Restrict", "Stealth", "Barrier"]
+      },
+      skill_3: {
+        number: 3,
+        type: "Active",
+        name: "Mirror of the Abyss",
+        soul: "+3",
+        cooldown: "8 turns",
+        description: "Traps all enemies in a timeless space, dispels two buffs, inflicts Block for 2 turns, and applies a random debuff for 1 turn. Increases the caster’s Combat Readiness by 50%.",
+        soulburn: {
+          cost: "",
+          effect: ""
+        },
+        trait: ["Block", "Random Debuff", "Combat Readiness Up"]
+      }
+    }
   },
 ];
