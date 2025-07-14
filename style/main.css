@@ -383,13 +383,22 @@ header {
     background: radial-gradient(circle, rgba(255, 255, 255, 0.10407913165266103) 0%, rgba(255, 255, 255, 0.06206232492997199) 51%, rgba(255, 255, 255, 0) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff", endColorstr="#ffffff", GradientType=1);
 }
-
+.character .char-box .skills {
+    max-height: fit-content;
+    transition: .2s all ease;
+}
 .character .char-box .skills .skill {
     background-color: #e4e8f7;
     margin: 5px;
     border-radius: .25rem;
     padding: 5px 8px;
     font-weight: bold;
+}
+
+.character .char-box .skill-close {
+    max-height: 0 !important;
+    overflow: hidden !important;
+    transition: .1s all ease;
 }
 
 .character .char-box .skills .skill .skill-num {
@@ -407,7 +416,9 @@ header {
     display: block;
     line-height: 1.2;
     font-weight: 500;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: #3e3e3e;
 }
 .character .char-box .skills .skill .skill-desc br {
     display: block;
@@ -422,10 +433,10 @@ header {
     display: flex;
     flex-wrap: wrap;
 }
-.character .char-box .traits .helper-text {
+.character .char-box .helper-text {
     width: 100%;
     font-size: 10px;
-    margin-bottom: 5px;
+    margin-top: 5px;
 }
 .character .char-box .trait {
     display: flex;
@@ -508,9 +519,13 @@ header {
     display: flex;
     align-items: center;
     width: 100%;
+    cursor: pointer;
     justify-content: flex-start;
     font-weight: bold;
     line-height: 1;
+}
+.character .char-box .name .content {
+    flex-grow: 1;
 }
 
 #particles-js {
@@ -641,6 +656,12 @@ footer {
     .character .char-box .skills .skill .skill-desc {
         font-size: 12px;
     }
+    .container-one {
+        display: block;
+    }
+    .container-one .container {
+        margin-right: 0;
+    }
 }
 
 @media (width <= 1200px){
@@ -683,6 +704,13 @@ footer {
 }
 
 @media (width <= 780px){
+    .main-wrapper .right-main .search .filter {
+        width: auto;        
+    }
+    .main-wrapper .right-main .search .filter span:nth-child(1) {
+        font-size: 10px;
+        padding: 0 15px;
+    }
     .main-wrapper .right-main{
         width: 680px;
         flex-shrink: 0;
@@ -737,11 +765,11 @@ footer {
         left: 0;
     }
     .character .char-box {
-        width: 170px;
+        width: 100%;
     }
 }
 
-@media (width <= 410px){
+@media (width <= 410px){    
     .main-wrapper .right-main{
         width: 360px;
         flex-shrink: 0;
@@ -751,7 +779,7 @@ footer {
         left: 0;
     }
     .character .char-box {
-        width: 150px;
+        width: 100%;
     }
 }
 

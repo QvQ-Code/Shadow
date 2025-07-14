@@ -35,7 +35,7 @@ const temp = [
           cost: "",
           effect: "",
         },
-        trait: ["", "", ""],
+        trait: [""],
       },
       skill_3: {
         number: 3,
@@ -48,7 +48,7 @@ const temp = [
           cost: "",
           effect: "",
         },
-        trait: ["",""],
+        trait: [""],
       },
     },
   },
